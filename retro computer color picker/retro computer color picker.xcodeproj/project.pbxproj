@@ -7,64 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		90B1F9242B438DA900D919C1 /* shinyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B1F9232B438DA900D919C1 /* shinyApp.swift */; };
-		90B1F9262B438DA900D919C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B1F9252B438DA900D919C1 /* ContentView.swift */; };
-		90B1F9282B438DAA00D919C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B1F9272B438DAA00D919C1 /* Assets.xcassets */; };
-		90B1F92B2B438DAA00D919C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B1F92A2B438DAA00D919C1 /* Preview Assets.xcassets */; };
-		90B1F9332B438E2500D919C1 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = 90B1F9322B438E2500D919C1 /* Shimmer */; };
+		90D19E132B26A352005FB41D /* retro_computer_color_pickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D19E122B26A352005FB41D /* retro_computer_color_pickerApp.swift */; };
+		90D19E152B26A352005FB41D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D19E142B26A352005FB41D /* ContentView.swift */; };
+		90D19E172B26A353005FB41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D19E162B26A353005FB41D /* Assets.xcassets */; };
+		90D19E1A2B26A353005FB41D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D19E192B26A353005FB41D /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		90B1F9202B438DA900D919C1 /* shiny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shiny.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		90B1F9232B438DA900D919C1 /* shinyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shinyApp.swift; sourceTree = "<group>"; };
-		90B1F9252B438DA900D919C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		90B1F9272B438DAA00D919C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		90B1F92A2B438DAA00D919C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		90D19E0F2B26A352005FB41D /* retro computer color picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "retro computer color picker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90D19E122B26A352005FB41D /* retro_computer_color_pickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = retro_computer_color_pickerApp.swift; sourceTree = "<group>"; };
+		90D19E142B26A352005FB41D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		90D19E162B26A353005FB41D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90D19E192B26A353005FB41D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		90B1F91D2B438DA900D919C1 /* Frameworks */ = {
+		90D19E0C2B26A352005FB41D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90B1F9332B438E2500D919C1 /* Shimmer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		90B1F9172B438DA900D919C1 = {
+		90D19E062B26A352005FB41D = {
 			isa = PBXGroup;
 			children = (
-				90B1F9222B438DA900D919C1 /* shiny */,
-				90B1F9212B438DA900D919C1 /* Products */,
+				90D19E112B26A352005FB41D /* retro computer color picker */,
+				90D19E102B26A352005FB41D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		90B1F9212B438DA900D919C1 /* Products */ = {
+		90D19E102B26A352005FB41D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				90B1F9202B438DA900D919C1 /* shiny.app */,
+				90D19E0F2B26A352005FB41D /* retro computer color picker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		90B1F9222B438DA900D919C1 /* shiny */ = {
+		90D19E112B26A352005FB41D /* retro computer color picker */ = {
 			isa = PBXGroup;
 			children = (
-				90B1F9232B438DA900D919C1 /* shinyApp.swift */,
-				90B1F9252B438DA900D919C1 /* ContentView.swift */,
-				90B1F9272B438DAA00D919C1 /* Assets.xcassets */,
-				90B1F9292B438DAA00D919C1 /* Preview Content */,
+				90D19E122B26A352005FB41D /* retro_computer_color_pickerApp.swift */,
+				90D19E142B26A352005FB41D /* ContentView.swift */,
+				90D19E162B26A353005FB41D /* Assets.xcassets */,
+				90D19E182B26A353005FB41D /* Preview Content */,
 			);
-			path = shiny;
+			path = "retro computer color picker";
 			sourceTree = "<group>";
 		};
-		90B1F9292B438DAA00D919C1 /* Preview Content */ = {
+		90D19E182B26A353005FB41D /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				90B1F92A2B438DAA00D919C1 /* Preview Assets.xcassets */,
+				90D19E192B26A353005FB41D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -72,42 +70,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		90B1F91F2B438DA900D919C1 /* shiny */ = {
+		90D19E0E2B26A352005FB41D /* retro computer color picker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 90B1F92E2B438DAA00D919C1 /* Build configuration list for PBXNativeTarget "shiny" */;
+			buildConfigurationList = 90D19E1D2B26A353005FB41D /* Build configuration list for PBXNativeTarget "retro computer color picker" */;
 			buildPhases = (
-				90B1F91C2B438DA900D919C1 /* Sources */,
-				90B1F91D2B438DA900D919C1 /* Frameworks */,
-				90B1F91E2B438DA900D919C1 /* Resources */,
+				90D19E0B2B26A352005FB41D /* Sources */,
+				90D19E0C2B26A352005FB41D /* Frameworks */,
+				90D19E0D2B26A352005FB41D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = shiny;
-			packageProductDependencies = (
-				90B1F9322B438E2500D919C1 /* Shimmer */,
-			);
-			productName = shiny;
-			productReference = 90B1F9202B438DA900D919C1 /* shiny.app */;
+			name = "retro computer color picker";
+			productName = "retro computer color picker";
+			productReference = 90D19E0F2B26A352005FB41D /* retro computer color picker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		90B1F9182B438DA900D919C1 /* Project object */ = {
+		90D19E072B26A352005FB41D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					90B1F91F2B438DA900D919C1 = {
+					90D19E0E2B26A352005FB41D = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = 90B1F91B2B438DA900D919C1 /* Build configuration list for PBXProject "shiny" */;
+			buildConfigurationList = 90D19E0A2B26A352005FB41D /* Build configuration list for PBXProject "retro computer color picker" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,45 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 90B1F9172B438DA900D919C1;
-			packageReferences = (
-				90B1F9312B438E2500D919C1 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
-			);
-			productRefGroup = 90B1F9212B438DA900D919C1 /* Products */;
+			mainGroup = 90D19E062B26A352005FB41D;
+			productRefGroup = 90D19E102B26A352005FB41D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				90B1F91F2B438DA900D919C1 /* shiny */,
+				90D19E0E2B26A352005FB41D /* retro computer color picker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		90B1F91E2B438DA900D919C1 /* Resources */ = {
+		90D19E0D2B26A352005FB41D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90B1F92B2B438DAA00D919C1 /* Preview Assets.xcassets in Resources */,
-				90B1F9282B438DAA00D919C1 /* Assets.xcassets in Resources */,
+				90D19E1A2B26A353005FB41D /* Preview Assets.xcassets in Resources */,
+				90D19E172B26A353005FB41D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		90B1F91C2B438DA900D919C1 /* Sources */ = {
+		90D19E0B2B26A352005FB41D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90B1F9262B438DA900D919C1 /* ContentView.swift in Sources */,
-				90B1F9242B438DA900D919C1 /* shinyApp.swift in Sources */,
+				90D19E152B26A352005FB41D /* ContentView.swift in Sources */,
+				90D19E132B26A352005FB41D /* retro_computer_color_pickerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		90B1F92C2B438DAA00D919C1 /* Debug */ = {
+		90D19E1B2B26A353005FB41D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -216,7 +208,7 @@
 			};
 			name = Debug;
 		};
-		90B1F92D2B438DAA00D919C1 /* Release */ = {
+		90D19E1C2B26A353005FB41D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -272,14 +264,14 @@
 			};
 			name = Release;
 		};
-		90B1F92F2B438DAA00D919C1 /* Debug */ = {
+		90D19E1E2B26A353005FB41D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"shiny/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"retro computer color picker/Preview Content\"";
 				DEVELOPMENT_TEAM = H37UJVUBTF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -293,7 +285,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ricecakesmedia.shiny;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.retro-computer-color-picker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -301,14 +293,14 @@
 			};
 			name = Debug;
 		};
-		90B1F9302B438DAA00D919C1 /* Release */ = {
+		90D19E1F2B26A353005FB41D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"shiny/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"retro computer color picker/Preview Content\"";
 				DEVELOPMENT_TEAM = H37UJVUBTF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -322,7 +314,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ricecakesmedia.shiny;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.retro-computer-color-picker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -333,44 +325,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		90B1F91B2B438DA900D919C1 /* Build configuration list for PBXProject "shiny" */ = {
+		90D19E0A2B26A352005FB41D /* Build configuration list for PBXProject "retro computer color picker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				90B1F92C2B438DAA00D919C1 /* Debug */,
-				90B1F92D2B438DAA00D919C1 /* Release */,
+				90D19E1B2B26A353005FB41D /* Debug */,
+				90D19E1C2B26A353005FB41D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		90B1F92E2B438DAA00D919C1 /* Build configuration list for PBXNativeTarget "shiny" */ = {
+		90D19E1D2B26A353005FB41D /* Build configuration list for PBXNativeTarget "retro computer color picker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				90B1F92F2B438DAA00D919C1 /* Debug */,
-				90B1F9302B438DAA00D919C1 /* Release */,
+				90D19E1E2B26A353005FB41D /* Debug */,
+				90D19E1F2B26A353005FB41D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		90B1F9312B438E2500D919C1 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		90B1F9322B438E2500D919C1 /* Shimmer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 90B1F9312B438E2500D919C1 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
-			productName = Shimmer;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 90B1F9182B438DA900D919C1 /* Project object */;
+	rootObject = 90D19E072B26A352005FB41D /* Project object */;
 }
