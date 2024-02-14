@@ -8,8 +8,10 @@
 import SwiftUI
 
 class EmojiMemoryGame {
+    let emojis = ["🏀","⚽️","🥎","🏓", "🏆", "😀", "🍟", "🍣", "✏️", "🌴", "🐶", "🦆"]
+    
     private var model = MemoryGame(numberOfPairsOfCards: 4) { pairIndex in
-            return ["🏀","⚽️","🥎","🏓", "🏆", "😀", "🍟", "🍣", "✏️", "🌴", "🐶", "🦆"][pairIndex]
+            return emojis[pairIndex]
         }
     
     var cards: Array<MemoryGame<String>.Card> {
