@@ -1,3 +1,10 @@
+//
+//  ContentView.swift
+//  calculator metric
+//
+//  Created by Michael Lee on 4/14/24.
+//
+
 import SwiftUI
 
 struct ContentView: View {
@@ -155,3 +162,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
