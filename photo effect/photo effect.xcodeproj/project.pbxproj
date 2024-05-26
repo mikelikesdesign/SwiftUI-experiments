@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		90932F302BF62F6200EFEE9D /* paperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90932F2F2BF62F6200EFEE9D /* paperApp.swift */; };
-		90932F322BF62F6200EFEE9D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90932F312BF62F6200EFEE9D /* ContentView.swift */; };
-		90932F342BF62F6300EFEE9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90932F332BF62F6300EFEE9D /* Assets.xcassets */; };
-		90932F372BF62F6300EFEE9D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90932F362BF62F6300EFEE9D /* Preview Assets.xcassets */; };
-		90932F402BF6302D00EFEE9D /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 90932F3F2BF6302D00EFEE9D /* Shaders.metal */; };
+		90384CE92BFF3AA500B32F41 /* photo_effectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90384CE82BFF3AA500B32F41 /* photo_effectApp.swift */; };
+		90384CEB2BFF3AA500B32F41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90384CEA2BFF3AA500B32F41 /* ContentView.swift */; };
+		90384CED2BFF3AA600B32F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90384CEC2BFF3AA600B32F41 /* Assets.xcassets */; };
+		90384CF02BFF3AA600B32F41 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90384CEF2BFF3AA600B32F41 /* Preview Assets.xcassets */; };
+		90384CF72BFF65DE00B32F41 /* MorphEffect.metal in Sources */ = {isa = PBXBuildFile; fileRef = 90384CF62BFF65DE00B32F41 /* MorphEffect.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		90932F2C2BF62F6200EFEE9D /* paper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		90932F2F2BF62F6200EFEE9D /* paperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paperApp.swift; sourceTree = "<group>"; };
-		90932F312BF62F6200EFEE9D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		90932F332BF62F6300EFEE9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		90932F362BF62F6300EFEE9D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		90932F3F2BF6302D00EFEE9D /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		90384CE52BFF3AA500B32F41 /* photo effect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "photo effect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90384CE82BFF3AA500B32F41 /* photo_effectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photo_effectApp.swift; sourceTree = "<group>"; };
+		90384CEA2BFF3AA500B32F41 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		90384CEC2BFF3AA600B32F41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90384CEF2BFF3AA600B32F41 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		90384CF62BFF65DE00B32F41 /* MorphEffect.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MorphEffect.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		90932F292BF62F6200EFEE9D /* Frameworks */ = {
+		90384CE22BFF3AA500B32F41 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -34,38 +34,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		90932F232BF62F6200EFEE9D = {
+		90384CDC2BFF3AA500B32F41 = {
 			isa = PBXGroup;
 			children = (
-				90932F2E2BF62F6200EFEE9D /* paper */,
-				90932F2D2BF62F6200EFEE9D /* Products */,
+				90384CE72BFF3AA500B32F41 /* photo effect */,
+				90384CE62BFF3AA500B32F41 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		90932F2D2BF62F6200EFEE9D /* Products */ = {
+		90384CE62BFF3AA500B32F41 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				90932F2C2BF62F6200EFEE9D /* paper.app */,
+				90384CE52BFF3AA500B32F41 /* photo effect.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		90932F2E2BF62F6200EFEE9D /* paper */ = {
+		90384CE72BFF3AA500B32F41 /* photo effect */ = {
 			isa = PBXGroup;
 			children = (
-				90932F2F2BF62F6200EFEE9D /* paperApp.swift */,
-				90932F312BF62F6200EFEE9D /* ContentView.swift */,
-				90932F3F2BF6302D00EFEE9D /* Shaders.metal */,
-				90932F332BF62F6300EFEE9D /* Assets.xcassets */,
-				90932F352BF62F6300EFEE9D /* Preview Content */,
+				90384CE82BFF3AA500B32F41 /* photo_effectApp.swift */,
+				90384CEA2BFF3AA500B32F41 /* ContentView.swift */,
+				90384CF62BFF65DE00B32F41 /* MorphEffect.metal */,
+				90384CEC2BFF3AA600B32F41 /* Assets.xcassets */,
+				90384CEE2BFF3AA600B32F41 /* Preview Content */,
 			);
-			path = paper;
+			path = "photo effect";
 			sourceTree = "<group>";
 		};
-		90932F352BF62F6300EFEE9D /* Preview Content */ = {
+		90384CEE2BFF3AA600B32F41 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				90932F362BF62F6300EFEE9D /* Preview Assets.xcassets */,
+				90384CEF2BFF3AA600B32F41 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -73,39 +73,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		90932F2B2BF62F6200EFEE9D /* paper */ = {
+		90384CE42BFF3AA500B32F41 /* photo effect */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 90932F3A2BF62F6300EFEE9D /* Build configuration list for PBXNativeTarget "paper" */;
+			buildConfigurationList = 90384CF32BFF3AA600B32F41 /* Build configuration list for PBXNativeTarget "photo effect" */;
 			buildPhases = (
-				90932F282BF62F6200EFEE9D /* Sources */,
-				90932F292BF62F6200EFEE9D /* Frameworks */,
-				90932F2A2BF62F6200EFEE9D /* Resources */,
+				90384CE12BFF3AA500B32F41 /* Sources */,
+				90384CE22BFF3AA500B32F41 /* Frameworks */,
+				90384CE32BFF3AA500B32F41 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = paper;
-			productName = paper;
-			productReference = 90932F2C2BF62F6200EFEE9D /* paper.app */;
+			name = "photo effect";
+			productName = "photo effect";
+			productReference = 90384CE52BFF3AA500B32F41 /* photo effect.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		90932F242BF62F6200EFEE9D /* Project object */ = {
+		90384CDD2BFF3AA500B32F41 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					90932F2B2BF62F6200EFEE9D = {
+					90384CE42BFF3AA500B32F41 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = 90932F272BF62F6200EFEE9D /* Build configuration list for PBXProject "paper" */;
+			buildConfigurationList = 90384CE02BFF3AA500B32F41 /* Build configuration list for PBXProject "photo effect" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,43 +113,43 @@
 				en,
 				Base,
 			);
-			mainGroup = 90932F232BF62F6200EFEE9D;
-			productRefGroup = 90932F2D2BF62F6200EFEE9D /* Products */;
+			mainGroup = 90384CDC2BFF3AA500B32F41;
+			productRefGroup = 90384CE62BFF3AA500B32F41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				90932F2B2BF62F6200EFEE9D /* paper */,
+				90384CE42BFF3AA500B32F41 /* photo effect */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		90932F2A2BF62F6200EFEE9D /* Resources */ = {
+		90384CE32BFF3AA500B32F41 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90932F372BF62F6300EFEE9D /* Preview Assets.xcassets in Resources */,
-				90932F342BF62F6300EFEE9D /* Assets.xcassets in Resources */,
+				90384CF02BFF3AA600B32F41 /* Preview Assets.xcassets in Resources */,
+				90384CED2BFF3AA600B32F41 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		90932F282BF62F6200EFEE9D /* Sources */ = {
+		90384CE12BFF3AA500B32F41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90932F402BF6302D00EFEE9D /* Shaders.metal in Sources */,
-				90932F322BF62F6200EFEE9D /* ContentView.swift in Sources */,
-				90932F302BF62F6200EFEE9D /* paperApp.swift in Sources */,
+				90384CEB2BFF3AA500B32F41 /* ContentView.swift in Sources */,
+				90384CF72BFF65DE00B32F41 /* MorphEffect.metal in Sources */,
+				90384CE92BFF3AA500B32F41 /* photo_effectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		90932F382BF62F6300EFEE9D /* Debug */ = {
+		90384CF12BFF3AA600B32F41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -212,7 +212,7 @@
 			};
 			name = Debug;
 		};
-		90932F392BF62F6300EFEE9D /* Release */ = {
+		90384CF22BFF3AA600B32F41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -268,14 +268,14 @@
 			};
 			name = Release;
 		};
-		90932F3B2BF62F6300EFEE9D /* Debug */ = {
+		90384CF42BFF3AA600B32F41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"paper/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"photo effect/Preview Content\"";
 				DEVELOPMENT_TEAM = H37UJVUBTF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -289,7 +289,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ricecakesmedia.paper;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.photo-effect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -297,14 +297,14 @@
 			};
 			name = Debug;
 		};
-		90932F3C2BF62F6300EFEE9D /* Release */ = {
+		90384CF52BFF3AA600B32F41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"paper/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"photo effect/Preview Content\"";
 				DEVELOPMENT_TEAM = H37UJVUBTF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -318,7 +318,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ricecakesmedia.paper;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.photo-effect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -329,25 +329,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		90932F272BF62F6200EFEE9D /* Build configuration list for PBXProject "paper" */ = {
+		90384CE02BFF3AA500B32F41 /* Build configuration list for PBXProject "photo effect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				90932F382BF62F6300EFEE9D /* Debug */,
-				90932F392BF62F6300EFEE9D /* Release */,
+				90384CF12BFF3AA600B32F41 /* Debug */,
+				90384CF22BFF3AA600B32F41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		90932F3A2BF62F6300EFEE9D /* Build configuration list for PBXNativeTarget "paper" */ = {
+		90384CF32BFF3AA600B32F41 /* Build configuration list for PBXNativeTarget "photo effect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				90932F3B2BF62F6300EFEE9D /* Debug */,
-				90932F3C2BF62F6300EFEE9D /* Release */,
+				90384CF42BFF3AA600B32F41 /* Debug */,
+				90384CF52BFF3AA600B32F41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 90932F242BF62F6200EFEE9D /* Project object */;
+	rootObject = 90384CDD2BFF3AA500B32F41 /* Project object */;
 }
