@@ -7,62 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		90A619E72BFB0556003A0805 /* blurred_textApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A619E62BFB0556003A0805 /* blurred_textApp.swift */; };
-		90A619E92BFB0556003A0805 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A619E82BFB0556003A0805 /* ContentView.swift */; };
-		90A619EB2BFB0558003A0805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90A619EA2BFB0558003A0805 /* Assets.xcassets */; };
-		90A619EE2BFB0558003A0805 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90A619ED2BFB0558003A0805 /* Preview Assets.xcassets */; };
+		90602B2E2C0BEEF600ECBB91 /* shiny_textApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90602B2D2C0BEEF600ECBB91 /* shiny_textApp.swift */; };
+		90602B302C0BEEF600ECBB91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90602B2F2C0BEEF600ECBB91 /* ContentView.swift */; };
+		90602B322C0BEEF700ECBB91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90602B312C0BEEF700ECBB91 /* Assets.xcassets */; };
+		90602B352C0BEEF700ECBB91 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90602B342C0BEEF700ECBB91 /* Preview Assets.xcassets */; };
+		90602B3D2C0BEF3700ECBB91 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = 90602B3C2C0BEF3700ECBB91 /* Shimmer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		90A619E32BFB0556003A0805 /* blurred text.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "blurred text.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		90A619E62BFB0556003A0805 /* blurred_textApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blurred_textApp.swift; sourceTree = "<group>"; };
-		90A619E82BFB0556003A0805 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		90A619EA2BFB0558003A0805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		90A619ED2BFB0558003A0805 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		90602B2A2C0BEEF600ECBB91 /* shiny text.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shiny text.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90602B2D2C0BEEF600ECBB91 /* shiny_textApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shiny_textApp.swift; sourceTree = "<group>"; };
+		90602B2F2C0BEEF600ECBB91 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		90602B312C0BEEF700ECBB91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90602B342C0BEEF700ECBB91 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		90A619E02BFB0556003A0805 /* Frameworks */ = {
+		90602B272C0BEEF600ECBB91 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90602B3D2C0BEF3700ECBB91 /* Shimmer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		90A619DA2BFB0556003A0805 = {
+		90602B212C0BEEF600ECBB91 = {
 			isa = PBXGroup;
 			children = (
-				90A619E52BFB0556003A0805 /* blurred text */,
-				90A619E42BFB0556003A0805 /* Products */,
+				90602B2C2C0BEEF600ECBB91 /* shiny text */,
+				90602B2B2C0BEEF600ECBB91 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		90A619E42BFB0556003A0805 /* Products */ = {
+		90602B2B2C0BEEF600ECBB91 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				90A619E32BFB0556003A0805 /* blurred text.app */,
+				90602B2A2C0BEEF600ECBB91 /* shiny text.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		90A619E52BFB0556003A0805 /* blurred text */ = {
+		90602B2C2C0BEEF600ECBB91 /* shiny text */ = {
 			isa = PBXGroup;
 			children = (
-				90A619E62BFB0556003A0805 /* blurred_textApp.swift */,
-				90A619E82BFB0556003A0805 /* ContentView.swift */,
-				90A619EA2BFB0558003A0805 /* Assets.xcassets */,
-				90A619EC2BFB0558003A0805 /* Preview Content */,
+				90602B2D2C0BEEF600ECBB91 /* shiny_textApp.swift */,
+				90602B2F2C0BEEF600ECBB91 /* ContentView.swift */,
+				90602B312C0BEEF700ECBB91 /* Assets.xcassets */,
+				90602B332C0BEEF700ECBB91 /* Preview Content */,
 			);
-			path = "blurred text";
+			path = "shiny text";
 			sourceTree = "<group>";
 		};
-		90A619EC2BFB0558003A0805 /* Preview Content */ = {
+		90602B332C0BEEF700ECBB91 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				90A619ED2BFB0558003A0805 /* Preview Assets.xcassets */,
+				90602B342C0BEEF700ECBB91 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -70,39 +72,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		90A619E22BFB0556003A0805 /* blurred text */ = {
+		90602B292C0BEEF600ECBB91 /* shiny text */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 90A619F12BFB0558003A0805 /* Build configuration list for PBXNativeTarget "blurred text" */;
+			buildConfigurationList = 90602B382C0BEEF700ECBB91 /* Build configuration list for PBXNativeTarget "shiny text" */;
 			buildPhases = (
-				90A619DF2BFB0556003A0805 /* Sources */,
-				90A619E02BFB0556003A0805 /* Frameworks */,
-				90A619E12BFB0556003A0805 /* Resources */,
+				90602B262C0BEEF600ECBB91 /* Sources */,
+				90602B272C0BEEF600ECBB91 /* Frameworks */,
+				90602B282C0BEEF600ECBB91 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "blurred text";
-			productName = "blurred text";
-			productReference = 90A619E32BFB0556003A0805 /* blurred text.app */;
+			name = "shiny text";
+			packageProductDependencies = (
+				90602B3C2C0BEF3700ECBB91 /* Shimmer */,
+			);
+			productName = "shiny text";
+			productReference = 90602B2A2C0BEEF600ECBB91 /* shiny text.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		90A619DB2BFB0556003A0805 /* Project object */ = {
+		90602B222C0BEEF600ECBB91 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					90A619E22BFB0556003A0805 = {
+					90602B292C0BEEF600ECBB91 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = 90A619DE2BFB0556003A0805 /* Build configuration list for PBXProject "blurred text" */;
+			buildConfigurationList = 90602B252C0BEEF600ECBB91 /* Build configuration list for PBXProject "shiny text" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,42 +115,45 @@
 				en,
 				Base,
 			);
-			mainGroup = 90A619DA2BFB0556003A0805;
-			productRefGroup = 90A619E42BFB0556003A0805 /* Products */;
+			mainGroup = 90602B212C0BEEF600ECBB91;
+			packageReferences = (
+				90602B3B2C0BEF3700ECBB91 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
+			);
+			productRefGroup = 90602B2B2C0BEEF600ECBB91 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				90A619E22BFB0556003A0805 /* blurred text */,
+				90602B292C0BEEF600ECBB91 /* shiny text */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		90A619E12BFB0556003A0805 /* Resources */ = {
+		90602B282C0BEEF600ECBB91 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90A619EE2BFB0558003A0805 /* Preview Assets.xcassets in Resources */,
-				90A619EB2BFB0558003A0805 /* Assets.xcassets in Resources */,
+				90602B352C0BEEF700ECBB91 /* Preview Assets.xcassets in Resources */,
+				90602B322C0BEEF700ECBB91 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		90A619DF2BFB0556003A0805 /* Sources */ = {
+		90602B262C0BEEF600ECBB91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90A619E92BFB0556003A0805 /* ContentView.swift in Sources */,
-				90A619E72BFB0556003A0805 /* blurred_textApp.swift in Sources */,
+				90602B302C0BEEF600ECBB91 /* ContentView.swift in Sources */,
+				90602B2E2C0BEEF600ECBB91 /* shiny_textApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		90A619EF2BFB0558003A0805 /* Debug */ = {
+		90602B362C0BEEF700ECBB91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -208,7 +216,7 @@
 			};
 			name = Debug;
 		};
-		90A619F02BFB0558003A0805 /* Release */ = {
+		90602B372C0BEEF700ECBB91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -264,14 +272,14 @@
 			};
 			name = Release;
 		};
-		90A619F22BFB0558003A0805 /* Debug */ = {
+		90602B392C0BEEF700ECBB91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"blurred text/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"shiny text/Preview Content\"";
 				DEVELOPMENT_TEAM = H37UJVUBTF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -285,7 +293,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.blurred-text";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.shiny-text";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -293,14 +301,14 @@
 			};
 			name = Debug;
 		};
-		90A619F32BFB0558003A0805 /* Release */ = {
+		90602B3A2C0BEEF700ECBB91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"blurred text/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"shiny text/Preview Content\"";
 				DEVELOPMENT_TEAM = H37UJVUBTF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -314,7 +322,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.blurred-text";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.shiny-text";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -325,25 +333,44 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		90A619DE2BFB0556003A0805 /* Build configuration list for PBXProject "blurred text" */ = {
+		90602B252C0BEEF600ECBB91 /* Build configuration list for PBXProject "shiny text" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				90A619EF2BFB0558003A0805 /* Debug */,
-				90A619F02BFB0558003A0805 /* Release */,
+				90602B362C0BEEF700ECBB91 /* Debug */,
+				90602B372C0BEEF700ECBB91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		90A619F12BFB0558003A0805 /* Build configuration list for PBXNativeTarget "blurred text" */ = {
+		90602B382C0BEEF700ECBB91 /* Build configuration list for PBXNativeTarget "shiny text" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				90A619F22BFB0558003A0805 /* Debug */,
-				90A619F32BFB0558003A0805 /* Release */,
+				90602B392C0BEEF700ECBB91 /* Debug */,
+				90602B3A2C0BEEF700ECBB91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		90602B3B2C0BEF3700ECBB91 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		90602B3C2C0BEF3700ECBB91 /* Shimmer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90602B3B2C0BEF3700ECBB91 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
+			productName = Shimmer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 90A619DB2BFB0556003A0805 /* Project object */;
+	rootObject = 90602B222C0BEEF600ECBB91 /* Project object */;
 }

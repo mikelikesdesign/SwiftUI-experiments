@@ -1,20 +1,17 @@
 //
-//  blurred_textApp.swift
-//  blurred text
+//  video_circlesApp.swift
+//  video circles
 //
-//  Created by Michael Lee on 5/20/24.
+//  Created by Michael Lee on 5/28/24.
 //
 
 import SwiftUI
 
 @main
-struct PrototypingApp: App {
+struct video_circlesApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
     }
 }
-
-
-
