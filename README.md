@@ -50,7 +50,7 @@ A prototype to slingshot photos that explores more drag gestures
 ## photo bubbles
 Tap to see a random image animate into view
 [Demo](https://x.com/mikelikesdesign/status/1832345443390648659)
-![Photo bubbles demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/walk%20charts/walk%20charts%20demo.gif?raw=true)
+![Photo bubbles demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/photo%20bubbles/photo%20bubbles.gif?raw=true)
 
 ## pull to search
 Pull to search interaction inspires by the Things app
@@ -71,4 +71,4 @@ Example using, https://github.com/markiv/SwiftUI-Shimmer
 ## walk charts
 Animated walking charts based on walking data
 [Demo](https://x.com/mikelikesdesign/status/1829848663675547771)
-![Walk charts demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/photo%20bubbles/photo%20bubbles.gif?raw=true)
+![Walk charts demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/walk%20charts/walk%20charts%20demo.gif?raw=true)
