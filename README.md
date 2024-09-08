@@ -39,6 +39,7 @@ Drag around the map to get a restaurant recommendation
 ## particle slider
 A slider to view animated particles in different states
 [Demo](https://x.com/mikelikesdesign/status/1831141602242531824)
+![Particle slider demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/particle%20slider/particle%20slider.gif?raw=true)
 
 ## photo slingshot
 A prototype to slingshot photos that explores more drag gestures
