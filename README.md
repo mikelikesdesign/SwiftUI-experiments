@@ -25,6 +25,9 @@ An animated globe with an interesting pattern
 ## keys
 An exploration looking at various drag gestures and animations
 
+## map explore
+Drag around the map to get a restaurant recommendation
+
 ## particle slider
 A slider to view animated particles in different states
 
