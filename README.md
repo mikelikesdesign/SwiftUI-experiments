@@ -70,3 +70,4 @@ Example using, https://github.com/markiv/SwiftUI-Shimmer
 ## walk charts
 Animated walking charts based on walking data
 [Demo](https://x.com/mikelikesdesign/status/1829848663675547771)
+![Walk charts demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/walk%20charts/walk%20charts%20demo.gif?raw=true)
