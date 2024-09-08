@@ -6,13 +6,15 @@ I'm a designer that is interested in building out my ideas with code. In this re
 
 ## bob
 A prototype that shows an interaction on how AI can summarize text
-[bob demo](https://x.com/mikelikesdesign/status/1790373946870895067)
+[Demo](https://x.com/mikelikesdesign/status/1790373946870895067)
 
 ## calculator metric
 A prototype that converts numbers to the metric system
+[Demo](https://posts.cv/mikelee/5wcdGx5M7wjGXZFCpzFp)
 
 ## drag to delete
 A prototype that shows a drag to delete interaction
+[Demo](https://x.com/mikelikesdesign/status/1794609990566826369)
 
 ## drag transform
 A prototype that shows an interaction on how to re-arrange your iOS navigation
