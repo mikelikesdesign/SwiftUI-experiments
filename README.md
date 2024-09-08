@@ -7,6 +7,7 @@ I'm a designer that is interested in building out my ideas with code. In this re
 ## bob
 A prototype that shows an interaction on how AI can summarize text
 [Demo](https://x.com/mikelikesdesign/status/1790373946870895067)
+![bob demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/bob/bob.gif?raw=true)
 
 ## calculator metric
 A prototype that converts numbers to the metric system
