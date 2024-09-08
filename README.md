@@ -1,6 +1,6 @@
 Hi, welcome to SwiftUI experiments.
 
-I'm a designer that is interested in building out my ideas with code. In this repository you will find some of my ideas I built.
+I'm a designer that is interested in building out my ideas with code. In this repository you will find some of my ideas I explored. These are mostly prototypes and not production ready apps.
 
 ![SwiftUI experiments](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/demos.gif?raw=true)
 
