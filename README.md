@@ -6,6 +6,7 @@ I'm a designer that is interested in building out my ideas with code. In this re
 
 ## bob
 A prototype that shows an interaction on how AI can summarize text
+[bob demo](https://x.com/mikelikesdesign/status/1790373946870895067)
 
 ## calculator metric
 A prototype that converts numbers to the metric system
