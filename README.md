@@ -18,7 +18,7 @@ A prototype that shows a drag to delete interaction
 
 ## drag transform
 A prototype that shows an interaction on how to re-arrange your iOS navigation
-[Demo](https://x.com/mikelikesdesign/status/1737868104884273329)<br>
+[Demo](https://x.com/mikelikesdesign/status/1737868104884273329)
 ![Draggable navigation demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/drag%20transform/draggable%20navigation.gif?raw=true)
 
 ## fried chicken
@@ -39,7 +39,7 @@ Drag around the map to get a restaurant recommendation
 
 ## particle slider
 A slider to view animated particles in different states
-[Demo](https://x.com/mikelikesdesign/status/1831141602242531824)<br>
+[Demo](https://x.com/mikelikesdesign/status/1831141602242531824)
 ![Particle slider demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/particle%20slider/particle%20slider.gif?raw=true)
 
 ## photo slingshot
