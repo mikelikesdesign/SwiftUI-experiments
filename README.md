@@ -53,7 +53,7 @@ Tap to see a random image animate into view
 ![Photo bubbles demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/photo%20bubbles/photo%20bubbles.gif?raw=true)
 
 ## pull to search
-Pull to search interaction inspires by the Things app
+Pull to search interaction inspired by the Things app
 [Demo](https://x.com/mikelikesdesign/status/1798157087203311927)
 
 ## reading tracker
