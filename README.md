@@ -18,39 +18,50 @@ A prototype that shows a drag to delete interaction
 
 ## drag transform
 A prototype that shows an interaction on how to re-arrange your iOS navigation
+[Demo](https://x.com/mikelikesdesign/status/1737868104884273329)
 
 ## fried chicken
 Tap to show various fried chicken emoji particles
 
 ## globe
 An animated globe with an interesting pattern
+[Demo](https://x.com/mikelikesdesign/status/1735257785926050202)
 
 ## keys
 An exploration looking at various drag gestures and animations
+[Demo](https://x.com/mikelikesdesign/status/1804383891471401380)
 
 ## map explore
 Drag around the map to get a restaurant recommendation
+[Demo](https://x.com/mikelikesdesign/status/1813480924589486255)
 
 ## particle slider
 A slider to view animated particles in different states
+[Demo](https://x.com/mikelikesdesign/status/1831141602242531824)
 
 ## photo slingshot
 A prototype to slingshot photos that explores more drag gestures
 
 ## photo bubbles
 Tap to see a random image animate into view
+[Demo](https://x.com/mikelikesdesign/status/1832345443390648659)
 
 ## pull to search
 Pull to search interaction inspires by the Things app
+[Demo](https://x.com/mikelikesdesign/status/1798157087203311927)
 
 ## reading tracker
 Get inspiring messages as the reader continues reading
+[Demo](https://x.com/mikelikesdesign/status/1788135346750017682)
 
 ## retro computer color picker
 A fun color picker
+[Demo](https://x.com/mikelikesdesign/status/1734069130213630021)
 
 ## shiny text
 Example using, https://github.com/markiv/SwiftUI-Shimmer
+[Demo](https://x.com/mikelikesdesign/status/1797067265172750392)
 
 ## walk charts
 Animated walking charts based on walking data
+[Demo](https://x.com/mikelikesdesign/status/1829848663675547771)
