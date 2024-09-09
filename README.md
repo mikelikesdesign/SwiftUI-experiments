@@ -29,6 +29,7 @@ Tap to show various fried chicken particles
 ## globe
 An animated globe with an interesting pattern
 [Demo](https://x.com/mikelikesdesign/status/1735257785926050202)
+![Globe demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/globe/globe.gif?raw=true)
 
 ## keys
 An exploration looking at various drag gestures and animations
