@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var circleSize: CGFloat = 64
     @State private var showImage = true
     @State private var initialCircleGrowth = false
-    @State private var dragPosition = CGPoint.zero
+    @State private var dragPosition = CGPoint(x: UIScreen.main.bounds.width / 2, y: 72 + 160)
     @State private var shrinkCircle = false
     
     var body: some View {
