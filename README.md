@@ -37,6 +37,7 @@ An exploration looking at various drag gestures and animations
 ## map explore
 Drag around the map to get a restaurant recommendation
 [Demo](https://x.com/mikelikesdesign/status/1813480924589486255)
+![Map explore demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/map%20explore/map%20explore.gif?raw=true)
 
 ## particle slider
 A slider to view animated particles in different states
