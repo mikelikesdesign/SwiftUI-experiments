@@ -17,6 +17,7 @@ struct ContentView: View {
     let screenHeight = UIScreen.main.bounds.height
     let trackpadHeight: CGFloat = UIScreen.main.bounds.height * 0.4
     let knobSize: CGFloat = 40
+    let knobEnlargementFactor: CGFloat = 1.5 // Increased from 1.25 to 1.5 for 50% enlargement
 
     let timer = Timer.publish(every: 0.016, on: .main, in: .common).autoconnect()
 
@@ -80,7 +81,8 @@ struct ContentView: View {
                     
                     Circle()
                         .fill(Color.white)
-                        .frame(width: isKnobEnlarged ? knobSize * 1.3 : knobSize, height: isKnobEnlarged ? knobSize * 1.3 : knobSize)
+                        .frame(width: isKnobEnlarged ? knobSize * knobEnlargementFactor : knobSize, 
+                               height: isKnobEnlarged ? knobSize * knobEnlargementFactor : knobSize)
                         .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 2)
                         .position(limitPositionToTrackpad(sliderPosition, in: geometry.size))
                         .offset(dragOffset)
@@ -136,7 +138,7 @@ struct ContentView: View {
         )
         
         // Update trackpad rotation based on knob position
-        let maxRotation: CGFloat = 3 // Reduced from 5 to 3 degrees
+        let maxRotation: CGFloat = 5 // Increased from 3 to 5 degrees
         let normalizedX = (sliderPosition.x / size.width) * 2 - 1 // Range: -1 to 1
         let normalizedY = (sliderPosition.y / trackpadHeight) * 2 - 1 // Range: -1 to 1
         trackpadRotation.y = normalizedX * maxRotation
