@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var shapes: [ShapeData] = []
-    @State private var isDragging = false
+    @State private var lastShapePosition: CGPoint?
     let animationDuration: Double = 0.7
+    let minDistanceBetweenShapes: CGFloat = 15 // Reduced from 20
+    let maxShapes: Int = 50 // Increased from 30
     
     var body: some View {
         ZStack {
@@ -28,20 +30,26 @@ struct ContentView: View {
         .gesture(
             DragGesture(minimumDistance: 0)
                 .onChanged { value in
-                    if !isDragging {
-                        isDragging = true
+                    if shouldAddShape(at: value.location) {
+                        addShape(at: value.location)
                     }
-                    addShape(at: value.location)
-                }
-                .onEnded { _ in
-                    isDragging = false
                 }
         )
+    }
+    
+    func shouldAddShape(at location: CGPoint) -> Bool {
+        guard let lastPosition = lastShapePosition else { return true }
+        return distance(from: lastPosition, to: location) >= minDistanceBetweenShapes
     }
     
     func addShape(at location: CGPoint) {
         let newShape = ShapeData(position: location)
         shapes.append(newShape)
+        lastShapePosition = location
+        
+        if shapes.count > maxShapes {
+            shapes.removeFirst()
+        }
         
         withAnimation(.easeOut(duration: animationDuration)) {
             if let index = shapes.firstIndex(where: { $0.id == newShape.id }) {
@@ -53,6 +61,10 @@ struct ContentView: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration) {
             shapes.removeAll { $0.id == newShape.id }
         }
+    }
+    
+    func distance(from p1: CGPoint, to p2: CGPoint) -> CGFloat {
+        return sqrt(pow(p2.x - p1.x, 2) + pow(p2.y - p1.y, 2))
     }
 }
 
