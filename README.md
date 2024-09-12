@@ -74,3 +74,6 @@ Example using, https://github.com/markiv/SwiftUI-Shimmer
 Animated walking charts based on walking data
 [Demo](https://x.com/mikelikesdesign/status/1829848663675547771)
 ![Walk charts demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/walk%20charts/walk%20charts%20demo.gif?raw=true)
+
+## shapes
+Drag around to see random shapes generated that vary in shape type, color and size
