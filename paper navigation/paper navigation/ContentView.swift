@@ -77,7 +77,7 @@ struct ContentView: View {
                     .onChanged { value in
                         isDragging = true
                         let dragDistance = value.translation.width - lastDragPosition
-                        let pageChangeThreshold: CGFloat = 50 // Adjust this value to change sensitivity
+                        let pageChangeThreshold: CGFloat = 30 // Reduced from 50 to 30 for more sensitivity
                         
                         if abs(dragDistance) > pageChangeThreshold {
                             let direction = dragDistance > 0 ? -1 : 1
