@@ -1,13 +1,13 @@
 //
-//  phone_passwordUITestsLaunchTests.swift
-//  phone passwordUITests
+//  signature_authenticationUITestsLaunchTests.swift
+//  signature authenticationUITests
 //
-//  Created by Michael Lee on 10/11/24.
+//  Created by Michael Lee on 10/12/24.
 //
 
 import XCTest
 
-final class phone_passwordUITestsLaunchTests: XCTestCase {
+final class signature_authenticationUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

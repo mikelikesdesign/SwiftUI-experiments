@@ -7,62 +7,62 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
-		904C880C2CB91FCF00676AE1 /* PBXContainerItemProxy */ = {
+		90C4940B2CBAB46500BA3E6D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 904C87F32CB91FCD00676AE1 /* Project object */;
+			containerPortal = 90C493F22CBAB46400BA3E6D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 904C87FA2CB91FCD00676AE1;
-			remoteInfo = "phone password";
+			remoteGlobalIDString = 90C493F92CBAB46400BA3E6D;
+			remoteInfo = "signature authentication";
 		};
-		904C88162CB91FCF00676AE1 /* PBXContainerItemProxy */ = {
+		90C494152CBAB46500BA3E6D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 904C87F32CB91FCD00676AE1 /* Project object */;
+			containerPortal = 90C493F22CBAB46400BA3E6D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 904C87FA2CB91FCD00676AE1;
-			remoteInfo = "phone password";
+			remoteGlobalIDString = 90C493F92CBAB46400BA3E6D;
+			remoteInfo = "signature authentication";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		904C87FB2CB91FCD00676AE1 /* phone password.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "phone password.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		904C880B2CB91FCF00676AE1 /* phone passwordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "phone passwordTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		904C88152CB91FCF00676AE1 /* phone passwordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "phone passwordUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90C493FA2CBAB46400BA3E6D /* signature authentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "signature authentication.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90C4940A2CBAB46500BA3E6D /* signature authenticationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "signature authenticationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90C494142CBAB46500BA3E6D /* signature authenticationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "signature authenticationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		904C87FD2CB91FCD00676AE1 /* phone password */ = {
+		90C493FC2CBAB46400BA3E6D /* signature authentication */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "phone password";
+			path = "signature authentication";
 			sourceTree = "<group>";
 		};
-		904C880E2CB91FCF00676AE1 /* phone passwordTests */ = {
+		90C4940D2CBAB46500BA3E6D /* signature authenticationTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "phone passwordTests";
+			path = "signature authenticationTests";
 			sourceTree = "<group>";
 		};
-		904C88182CB91FCF00676AE1 /* phone passwordUITests */ = {
+		90C494172CBAB46500BA3E6D /* signature authenticationUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "phone passwordUITests";
+			path = "signature authenticationUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		904C87F82CB91FCD00676AE1 /* Frameworks */ = {
+		90C493F72CBAB46400BA3E6D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		904C88082CB91FCF00676AE1 /* Frameworks */ = {
+		90C494072CBAB46500BA3E6D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		904C88122CB91FCF00676AE1 /* Frameworks */ = {
+		90C494112CBAB46500BA3E6D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,22 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		904C87F22CB91FCD00676AE1 = {
+		90C493F12CBAB46400BA3E6D = {
 			isa = PBXGroup;
 			children = (
-				904C87FD2CB91FCD00676AE1 /* phone password */,
-				904C880E2CB91FCF00676AE1 /* phone passwordTests */,
-				904C88182CB91FCF00676AE1 /* phone passwordUITests */,
-				904C87FC2CB91FCD00676AE1 /* Products */,
+				90C493FC2CBAB46400BA3E6D /* signature authentication */,
+				90C4940D2CBAB46500BA3E6D /* signature authenticationTests */,
+				90C494172CBAB46500BA3E6D /* signature authenticationUITests */,
+				90C493FB2CBAB46400BA3E6D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		904C87FC2CB91FCD00676AE1 /* Products */ = {
+		90C493FB2CBAB46400BA3E6D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				904C87FB2CB91FCD00676AE1 /* phone password.app */,
-				904C880B2CB91FCF00676AE1 /* phone passwordTests.xctest */,
-				904C88152CB91FCF00676AE1 /* phone passwordUITests.xctest */,
+				90C493FA2CBAB46400BA3E6D /* signature authentication.app */,
+				90C4940A2CBAB46500BA3E6D /* signature authenticationTests.xctest */,
+				90C494142CBAB46500BA3E6D /* signature authenticationUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,134 +95,134 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		904C87FA2CB91FCD00676AE1 /* phone password */ = {
+		90C493F92CBAB46400BA3E6D /* signature authentication */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 904C881F2CB91FCF00676AE1 /* Build configuration list for PBXNativeTarget "phone password" */;
+			buildConfigurationList = 90C4941E2CBAB46500BA3E6D /* Build configuration list for PBXNativeTarget "signature authentication" */;
 			buildPhases = (
-				904C87F72CB91FCD00676AE1 /* Sources */,
-				904C87F82CB91FCD00676AE1 /* Frameworks */,
-				904C87F92CB91FCD00676AE1 /* Resources */,
+				90C493F62CBAB46400BA3E6D /* Sources */,
+				90C493F72CBAB46400BA3E6D /* Frameworks */,
+				90C493F82CBAB46400BA3E6D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				904C87FD2CB91FCD00676AE1 /* phone password */,
+				90C493FC2CBAB46400BA3E6D /* signature authentication */,
 			);
-			name = "phone password";
+			name = "signature authentication";
 			packageProductDependencies = (
 			);
-			productName = "phone password";
-			productReference = 904C87FB2CB91FCD00676AE1 /* phone password.app */;
+			productName = "signature authentication";
+			productReference = 90C493FA2CBAB46400BA3E6D /* signature authentication.app */;
 			productType = "com.apple.product-type.application";
 		};
-		904C880A2CB91FCF00676AE1 /* phone passwordTests */ = {
+		90C494092CBAB46500BA3E6D /* signature authenticationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 904C88222CB91FCF00676AE1 /* Build configuration list for PBXNativeTarget "phone passwordTests" */;
+			buildConfigurationList = 90C494212CBAB46500BA3E6D /* Build configuration list for PBXNativeTarget "signature authenticationTests" */;
 			buildPhases = (
-				904C88072CB91FCF00676AE1 /* Sources */,
-				904C88082CB91FCF00676AE1 /* Frameworks */,
-				904C88092CB91FCF00676AE1 /* Resources */,
+				90C494062CBAB46500BA3E6D /* Sources */,
+				90C494072CBAB46500BA3E6D /* Frameworks */,
+				90C494082CBAB46500BA3E6D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				904C880D2CB91FCF00676AE1 /* PBXTargetDependency */,
+				90C4940C2CBAB46500BA3E6D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				904C880E2CB91FCF00676AE1 /* phone passwordTests */,
+				90C4940D2CBAB46500BA3E6D /* signature authenticationTests */,
 			);
-			name = "phone passwordTests";
+			name = "signature authenticationTests";
 			packageProductDependencies = (
 			);
-			productName = "phone passwordTests";
-			productReference = 904C880B2CB91FCF00676AE1 /* phone passwordTests.xctest */;
+			productName = "signature authenticationTests";
+			productReference = 90C4940A2CBAB46500BA3E6D /* signature authenticationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		904C88142CB91FCF00676AE1 /* phone passwordUITests */ = {
+		90C494132CBAB46500BA3E6D /* signature authenticationUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 904C88252CB91FCF00676AE1 /* Build configuration list for PBXNativeTarget "phone passwordUITests" */;
+			buildConfigurationList = 90C494242CBAB46500BA3E6D /* Build configuration list for PBXNativeTarget "signature authenticationUITests" */;
 			buildPhases = (
-				904C88112CB91FCF00676AE1 /* Sources */,
-				904C88122CB91FCF00676AE1 /* Frameworks */,
-				904C88132CB91FCF00676AE1 /* Resources */,
+				90C494102CBAB46500BA3E6D /* Sources */,
+				90C494112CBAB46500BA3E6D /* Frameworks */,
+				90C494122CBAB46500BA3E6D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				904C88172CB91FCF00676AE1 /* PBXTargetDependency */,
+				90C494162CBAB46500BA3E6D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				904C88182CB91FCF00676AE1 /* phone passwordUITests */,
+				90C494172CBAB46500BA3E6D /* signature authenticationUITests */,
 			);
-			name = "phone passwordUITests";
+			name = "signature authenticationUITests";
 			packageProductDependencies = (
 			);
-			productName = "phone passwordUITests";
-			productReference = 904C88152CB91FCF00676AE1 /* phone passwordUITests.xctest */;
+			productName = "signature authenticationUITests";
+			productReference = 90C494142CBAB46500BA3E6D /* signature authenticationUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		904C87F32CB91FCD00676AE1 /* Project object */ = {
+		90C493F22CBAB46400BA3E6D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					904C87FA2CB91FCD00676AE1 = {
+					90C493F92CBAB46400BA3E6D = {
 						CreatedOnToolsVersion = 16.0;
 					};
-					904C880A2CB91FCF00676AE1 = {
+					90C494092CBAB46500BA3E6D = {
 						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 904C87FA2CB91FCD00676AE1;
+						TestTargetID = 90C493F92CBAB46400BA3E6D;
 					};
-					904C88142CB91FCF00676AE1 = {
+					90C494132CBAB46500BA3E6D = {
 						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 904C87FA2CB91FCD00676AE1;
+						TestTargetID = 90C493F92CBAB46400BA3E6D;
 					};
 				};
 			};
-			buildConfigurationList = 904C87F62CB91FCD00676AE1 /* Build configuration list for PBXProject "phone password" */;
+			buildConfigurationList = 90C493F52CBAB46400BA3E6D /* Build configuration list for PBXProject "signature authentication" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 904C87F22CB91FCD00676AE1;
+			mainGroup = 90C493F12CBAB46400BA3E6D;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 904C87FC2CB91FCD00676AE1 /* Products */;
+			productRefGroup = 90C493FB2CBAB46400BA3E6D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				904C87FA2CB91FCD00676AE1 /* phone password */,
-				904C880A2CB91FCF00676AE1 /* phone passwordTests */,
-				904C88142CB91FCF00676AE1 /* phone passwordUITests */,
+				90C493F92CBAB46400BA3E6D /* signature authentication */,
+				90C494092CBAB46500BA3E6D /* signature authenticationTests */,
+				90C494132CBAB46500BA3E6D /* signature authenticationUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		904C87F92CB91FCD00676AE1 /* Resources */ = {
+		90C493F82CBAB46400BA3E6D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		904C88092CB91FCF00676AE1 /* Resources */ = {
+		90C494082CBAB46500BA3E6D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		904C88132CB91FCF00676AE1 /* Resources */ = {
+		90C494122CBAB46500BA3E6D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,21 +232,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		904C87F72CB91FCD00676AE1 /* Sources */ = {
+		90C493F62CBAB46400BA3E6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		904C88072CB91FCF00676AE1 /* Sources */ = {
+		90C494062CBAB46500BA3E6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		904C88112CB91FCF00676AE1 /* Sources */ = {
+		90C494102CBAB46500BA3E6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,20 +256,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		904C880D2CB91FCF00676AE1 /* PBXTargetDependency */ = {
+		90C4940C2CBAB46500BA3E6D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 904C87FA2CB91FCD00676AE1 /* phone password */;
-			targetProxy = 904C880C2CB91FCF00676AE1 /* PBXContainerItemProxy */;
+			target = 90C493F92CBAB46400BA3E6D /* signature authentication */;
+			targetProxy = 90C4940B2CBAB46500BA3E6D /* PBXContainerItemProxy */;
 		};
-		904C88172CB91FCF00676AE1 /* PBXTargetDependency */ = {
+		90C494162CBAB46500BA3E6D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 904C87FA2CB91FCD00676AE1 /* phone password */;
-			targetProxy = 904C88162CB91FCF00676AE1 /* PBXContainerItemProxy */;
+			target = 90C493F92CBAB46400BA3E6D /* signature authentication */;
+			targetProxy = 90C494152CBAB46500BA3E6D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		904C881D2CB91FCF00676AE1 /* Debug */ = {
+		90C4941C2CBAB46500BA3E6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -332,7 +332,7 @@
 			};
 			name = Debug;
 		};
-		904C881E2CB91FCF00676AE1 /* Release */ = {
+		90C4941D2CBAB46500BA3E6D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -388,14 +388,14 @@
 			};
 			name = Release;
 		};
-		904C88202CB91FCF00676AE1 /* Debug */ = {
+		90C4941F2CBAB46500BA3E6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"phone password/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"signature authentication/Preview Content\"";
 				DEVELOPMENT_TEAM = H37UJVUBTF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -409,7 +409,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ricecakesmedia;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.signature-authentication";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -417,14 +417,14 @@
 			};
 			name = Debug;
 		};
-		904C88212CB91FCF00676AE1 /* Release */ = {
+		90C494202CBAB46500BA3E6D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"phone password/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"signature authentication/Preview Content\"";
 				DEVELOPMENT_TEAM = H37UJVUBTF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -438,7 +438,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ricecakesmedia;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.signature-authentication";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -446,114 +446,118 @@
 			};
 			name = Release;
 		};
-		904C88232CB91FCF00676AE1 /* Debug */ = {
+		90C494222CBAB46500BA3E6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37UJVUBTF;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.phone-passwordTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.signature-authenticationTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/phone password.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/phone password";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/signature authentication.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/signature authentication";
 			};
 			name = Debug;
 		};
-		904C88242CB91FCF00676AE1 /* Release */ = {
+		90C494232CBAB46500BA3E6D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37UJVUBTF;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.phone-passwordTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.signature-authenticationTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/phone password.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/phone password";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/signature authentication.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/signature authentication";
 			};
 			name = Release;
 		};
-		904C88262CB91FCF00676AE1 /* Debug */ = {
+		90C494252CBAB46500BA3E6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37UJVUBTF;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.phone-passwordUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.signature-authenticationUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "phone password";
+				TEST_TARGET_NAME = "signature authentication";
 			};
 			name = Debug;
 		};
-		904C88272CB91FCF00676AE1 /* Release */ = {
+		90C494262CBAB46500BA3E6D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37UJVUBTF;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.phone-passwordUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.signature-authenticationUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "phone password";
+				TEST_TARGET_NAME = "signature authentication";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		904C87F62CB91FCD00676AE1 /* Build configuration list for PBXProject "phone password" */ = {
+		90C493F52CBAB46400BA3E6D /* Build configuration list for PBXProject "signature authentication" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				904C881D2CB91FCF00676AE1 /* Debug */,
-				904C881E2CB91FCF00676AE1 /* Release */,
+				90C4941C2CBAB46500BA3E6D /* Debug */,
+				90C4941D2CBAB46500BA3E6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		904C881F2CB91FCF00676AE1 /* Build configuration list for PBXNativeTarget "phone password" */ = {
+		90C4941E2CBAB46500BA3E6D /* Build configuration list for PBXNativeTarget "signature authentication" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				904C88202CB91FCF00676AE1 /* Debug */,
-				904C88212CB91FCF00676AE1 /* Release */,
+				90C4941F2CBAB46500BA3E6D /* Debug */,
+				90C494202CBAB46500BA3E6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		904C88222CB91FCF00676AE1 /* Build configuration list for PBXNativeTarget "phone passwordTests" */ = {
+		90C494212CBAB46500BA3E6D /* Build configuration list for PBXNativeTarget "signature authenticationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				904C88232CB91FCF00676AE1 /* Debug */,
-				904C88242CB91FCF00676AE1 /* Release */,
+				90C494222CBAB46500BA3E6D /* Debug */,
+				90C494232CBAB46500BA3E6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		904C88252CB91FCF00676AE1 /* Build configuration list for PBXNativeTarget "phone passwordUITests" */ = {
+		90C494242CBAB46500BA3E6D /* Build configuration list for PBXNativeTarget "signature authenticationUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				904C88262CB91FCF00676AE1 /* Debug */,
-				904C88272CB91FCF00676AE1 /* Release */,
+				90C494252CBAB46500BA3E6D /* Debug */,
+				90C494262CBAB46500BA3E6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 904C87F32CB91FCD00676AE1 /* Project object */;
+	rootObject = 90C493F22CBAB46400BA3E6D /* Project object */;
 }

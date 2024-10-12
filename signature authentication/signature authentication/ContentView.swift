@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  phone password
+//  signature authentication
 //
 //  Created by Michael Lee on 10/11/24.
 //
@@ -320,7 +320,7 @@ struct NumberView: View {
     @State private var displayedNumber = "0"
     @State private var opacity = 1.0
     
-    let timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect()  
+    let timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect()
     
     var body: some View {
         ZStack {

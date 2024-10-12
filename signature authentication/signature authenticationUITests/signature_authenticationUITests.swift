@@ -1,13 +1,13 @@
 //
-//  phone_passwordUITests.swift
-//  phone passwordUITests
+//  signature_authenticationUITests.swift
+//  signature authenticationUITests
 //
-//  Created by Michael Lee on 10/11/24.
+//  Created by Michael Lee on 10/12/24.
 //
 
 import XCTest
 
-final class phone_passwordUITests: XCTestCase {
+final class signature_authenticationUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
