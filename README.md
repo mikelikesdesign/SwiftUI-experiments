@@ -86,3 +86,7 @@ Drag around to jump to different pages quickly
 ## signature authentication
 Sign your signature to authenticate
 [Demo](https://x.com/mikelikesdesign/status/1844911279141683316)
+
+## dots interaction
+Bouncy dots with haptic feedback
+[Demo](https://x.com/mikelikesdesign/status/1850386083202396554)
