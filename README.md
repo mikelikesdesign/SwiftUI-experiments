@@ -90,3 +90,7 @@ Sign your signature to authenticate
 ## dots interaction
 Bouncy dots with haptic feedback
 [Demo](https://x.com/mikelikesdesign/status/1850386083202396554)
+
+## word slider interaction
+A slider interaction to adjust the tone of the content
+[Demo](https://x.com/mikelikesdesign/status/1855043920109223998)
