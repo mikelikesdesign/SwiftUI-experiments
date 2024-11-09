@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		90B9578B2CDEDD38009CBC70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90B957722CDEDD37009CBC70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90B957792CDEDD37009CBC70;
+			remoteInfo = "word slider interaction";
+		};
+		90B957952CDEDD38009CBC70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90B957722CDEDD37009CBC70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90B957792CDEDD37009CBC70;
+			remoteInfo = "word slider interaction";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		90B9577A2CDEDD37009CBC70 /* word slider interaction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "word slider interaction.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90B9578A2CDEDD38009CBC70 /* word slider interactionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "word slider interactionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90B957942CDEDD38009CBC70 /* word slider interactionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "word slider interactionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		90B9577C2CDEDD37009CBC70 /* word slider interaction */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "word slider interaction";
+			sourceTree = "<group>";
+		};
+		90B9578D2CDEDD38009CBC70 /* word slider interactionTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "word slider interactionTests";
+			sourceTree = "<group>";
+		};
+		90B957972CDEDD38009CBC70 /* word slider interactionUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "word slider interactionUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90B957772CDEDD37009CBC70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90B957872CDEDD38009CBC70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90B957912CDEDD38009CBC70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90B957712CDEDD37009CBC70 = {
+			isa = PBXGroup;
+			children = (
+				90B9577C2CDEDD37009CBC70 /* word slider interaction */,
+				90B9578D2CDEDD38009CBC70 /* word slider interactionTests */,
+				90B957972CDEDD38009CBC70 /* word slider interactionUITests */,
+				90B9577B2CDEDD37009CBC70 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		90B9577B2CDEDD37009CBC70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90B9577A2CDEDD37009CBC70 /* word slider interaction.app */,
+				90B9578A2CDEDD38009CBC70 /* word slider interactionTests.xctest */,
+				90B957942CDEDD38009CBC70 /* word slider interactionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90B957792CDEDD37009CBC70 /* word slider interaction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90B9579E2CDEDD38009CBC70 /* Build configuration list for PBXNativeTarget "word slider interaction" */;
+			buildPhases = (
+				90B957762CDEDD37009CBC70 /* Sources */,
+				90B957772CDEDD37009CBC70 /* Frameworks */,
+				90B957782CDEDD37009CBC70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				90B9577C2CDEDD37009CBC70 /* word slider interaction */,
+			);
+			name = "word slider interaction";
+			packageProductDependencies = (
+			);
+			productName = "word slider interaction";
+			productReference = 90B9577A2CDEDD37009CBC70 /* word slider interaction.app */;
+			productType = "com.apple.product-type.application";
+		};
+		90B957892CDEDD38009CBC70 /* word slider interactionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90B957A12CDEDD38009CBC70 /* Build configuration list for PBXNativeTarget "word slider interactionTests" */;
+			buildPhases = (
+				90B957862CDEDD38009CBC70 /* Sources */,
+				90B957872CDEDD38009CBC70 /* Frameworks */,
+				90B957882CDEDD38009CBC70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90B9578C2CDEDD38009CBC70 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				90B9578D2CDEDD38009CBC70 /* word slider interactionTests */,
+			);
+			name = "word slider interactionTests";
+			packageProductDependencies = (
+			);
+			productName = "word slider interactionTests";
+			productReference = 90B9578A2CDEDD38009CBC70 /* word slider interactionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		90B957932CDEDD38009CBC70 /* word slider interactionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90B957A42CDEDD38009CBC70 /* Build configuration list for PBXNativeTarget "word slider interactionUITests" */;
+			buildPhases = (
+				90B957902CDEDD38009CBC70 /* Sources */,
+				90B957912CDEDD38009CBC70 /* Frameworks */,
+				90B957922CDEDD38009CBC70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90B957962CDEDD38009CBC70 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				90B957972CDEDD38009CBC70 /* word slider interactionUITests */,
+			);
+			name = "word slider interactionUITests";
+			packageProductDependencies = (
+			);
+			productName = "word slider interactionUITests";
+			productReference = 90B957942CDEDD38009CBC70 /* word slider interactionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90B957722CDEDD37009CBC70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					90B957792CDEDD37009CBC70 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					90B957892CDEDD38009CBC70 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 90B957792CDEDD37009CBC70;
+					};
+					90B957932CDEDD38009CBC70 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 90B957792CDEDD37009CBC70;
+					};
+				};
+			};
+			buildConfigurationList = 90B957752CDEDD37009CBC70 /* Build configuration list for PBXProject "word slider interaction" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90B957712CDEDD37009CBC70;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 90B9577B2CDEDD37009CBC70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90B957792CDEDD37009CBC70 /* word slider interaction */,
+				90B957892CDEDD38009CBC70 /* word slider interactionTests */,
+				90B957932CDEDD38009CBC70 /* word slider interactionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90B957782CDEDD37009CBC70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90B957882CDEDD38009CBC70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90B957922CDEDD38009CBC70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90B957762CDEDD37009CBC70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90B957862CDEDD38009CBC70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90B957902CDEDD38009CBC70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90B9578C2CDEDD38009CBC70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90B957792CDEDD37009CBC70 /* word slider interaction */;
+			targetProxy = 90B9578B2CDEDD38009CBC70 /* PBXContainerItemProxy */;
+		};
+		90B957962CDEDD38009CBC70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90B957792CDEDD37009CBC70 /* word slider interaction */;
+			targetProxy = 90B957952CDEDD38009CBC70 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		90B9579C2CDEDD38009CBC70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		90B9579D2CDEDD38009CBC70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90B9579F2CDEDD38009CBC70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"word slider interaction/Preview Content\"";
+				DEVELOPMENT_TEAM = H37UJVUBTF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.word-slider-interaction";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		90B957A02CDEDD38009CBC70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"word slider interaction/Preview Content\"";
+				DEVELOPMENT_TEAM = H37UJVUBTF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.word-slider-interaction";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		90B957A22CDEDD38009CBC70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37UJVUBTF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.word-slider-interactionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/word slider interaction.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/word slider interaction";
+			};
+			name = Debug;
+		};
+		90B957A32CDEDD38009CBC70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37UJVUBTF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.word-slider-interactionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/word slider interaction.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/word slider interaction";
+			};
+			name = Release;
+		};
+		90B957A52CDEDD38009CBC70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37UJVUBTF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.word-slider-interactionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "word slider interaction";
+			};
+			name = Debug;
+		};
+		90B957A62CDEDD38009CBC70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H37UJVUBTF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.word-slider-interactionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "word slider interaction";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90B957752CDEDD37009CBC70 /* Build configuration list for PBXProject "word slider interaction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90B9579C2CDEDD38009CBC70 /* Debug */,
+				90B9579D2CDEDD38009CBC70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90B9579E2CDEDD38009CBC70 /* Build configuration list for PBXNativeTarget "word slider interaction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90B9579F2CDEDD38009CBC70 /* Debug */,
+				90B957A02CDEDD38009CBC70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90B957A12CDEDD38009CBC70 /* Build configuration list for PBXNativeTarget "word slider interactionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90B957A22CDEDD38009CBC70 /* Debug */,
+				90B957A32CDEDD38009CBC70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90B957A42CDEDD38009CBC70 /* Build configuration list for PBXNativeTarget "word slider interactionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90B957A52CDEDD38009CBC70 /* Debug */,
+				90B957A62CDEDD38009CBC70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90B957722CDEDD37009CBC70 /* Project object */;
+}
