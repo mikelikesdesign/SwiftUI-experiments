@@ -94,3 +94,7 @@ Bouncy dots with haptic feedback
 ## word slider interaction
 A slider interaction to adjust the tone of the content
 [Demo](https://x.com/mikelikesdesign/status/1855043920109223998)
+
+## solid circles
+Drag around to see circles generated in a tunnel format
+[Demo](https://x.com/mikelikesdesign/status/1855207110898065620)
