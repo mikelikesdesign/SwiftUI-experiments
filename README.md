@@ -98,3 +98,7 @@ A slider interaction to adjust the tone of the content
 ## solid circles
 Drag around to see circles generated in a tunnel format
 [Demo](https://x.com/mikelikesdesign/status/1855207110898065620)
+
+## blob animation
+An animated blob you can interact with
+[Demo](https://x.com/mikelikesdesign/status/1856705459983646950)
