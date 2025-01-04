@@ -102,3 +102,7 @@ Drag around to see circles generated in a tunnel format
 ## blob animation
 An animated blob you can interact with
 [Demo](https://x.com/mikelikesdesign/status/1856705459983646950)
+
+## map trackpad
+A trackpad interaction to get a restaurant recommendation based on cuisine type
+[Demo](https://x.com/mikelikesdesign/status/1857586105652228117)
