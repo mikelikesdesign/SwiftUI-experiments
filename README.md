@@ -106,3 +106,7 @@ An animated blob you can interact with
 ## map trackpad
 A trackpad interaction to get a restaurant recommendation based on cuisine type
 [Demo](https://x.com/mikelikesdesign/status/1857586105652228117)
+
+## particle text
+A text built with particles that you ca interact with and an animated gradient button
+[Demo](https://x.com/mikelikesdesign/status/1862504016011567537)
