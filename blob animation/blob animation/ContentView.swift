@@ -52,7 +52,7 @@ class MetalView: UIView {
     
     private func setupMetal() {
         metalLayer = CAShapeLayer()
-        metalLayer.fillColor = UIColor(white: 0.8, alpha: 1.0).cgColor
+        metalLayer.fillColor = UIColor.white.cgColor
         metalLayer.shadowColor = UIColor.white.cgColor
         metalLayer.shadowOffset = .zero
         metalLayer.shadowRadius = 10
@@ -155,7 +155,7 @@ class MetalView: UIView {
         let animation = CABasicAnimation(keyPath: "fillColor")
         animation.fromValue = metalLayer.fillColor
         animation.toValue = UIColor(
-            white: 0.7 + CGFloat.random(in: 0...0.2),
+            white: 0.9 + CGFloat.random(in: 0...0.1),
             alpha: 1.0
         ).cgColor
         animation.duration = 0.1
