@@ -114,3 +114,7 @@ A text built with particles that you can interact with and an animated gradient 
 ## colorful glow
 Drag around to see a colorful glow that changes in shape and color
 [Demo](https://x.com/mikelikesdesign/status/1872839436096160149)
+
+## text animation
+Pinch in and out to see different text details
+[Demo](https://x.com/mikelikesdesign/status/1885506922302013919)
