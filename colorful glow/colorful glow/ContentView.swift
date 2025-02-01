@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  demo
+//  colorful glow
 //
 //  Created by Michael Lee on 12/28/24.
 //
