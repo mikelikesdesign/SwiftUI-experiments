@@ -110,3 +110,7 @@ A trackpad interaction to get a restaurant recommendation based on cuisine type
 ## particle text
 A text built with particles that you can interact with and an animated gradient button
 [Demo](https://x.com/mikelikesdesign/status/1862504016011567537)
+
+## colorful glow
+Drag around to see a colorful glow that changes in shape and color
+[Demo](https://x.com/mikelikesdesign/status/1872839436096160149)
