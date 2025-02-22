@@ -7,62 +7,62 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
-		9024CEDC2D622B58000E8000 /* PBXContainerItemProxy */ = {
+		90B2271E2D699D01001B980F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9024CEC32D622B57000E8000 /* Project object */;
+			containerPortal = 90B227052D699CFF001B980F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9024CECA2D622B57000E8000;
-			remoteInfo = squares;
+			remoteGlobalIDString = 90B2270C2D699CFF001B980F;
+			remoteInfo = "pixel animation";
 		};
-		9024CEE62D622B58000E8000 /* PBXContainerItemProxy */ = {
+		90B227282D699D01001B980F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9024CEC32D622B57000E8000 /* Project object */;
+			containerPortal = 90B227052D699CFF001B980F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9024CECA2D622B57000E8000;
-			remoteInfo = squares;
+			remoteGlobalIDString = 90B2270C2D699CFF001B980F;
+			remoteInfo = "pixel animation";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9024CECB2D622B57000E8000 /* squares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = squares.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9024CEDB2D622B58000E8000 /* squaresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = squaresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9024CEE52D622B58000E8000 /* squaresUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = squaresUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90B2270D2D699CFF001B980F /* pixel animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pixel animation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90B2271D2D699D01001B980F /* pixel animationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pixel animationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90B227272D699D01001B980F /* pixel animationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pixel animationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9024CECD2D622B57000E8000 /* squares */ = {
+		90B2270F2D699CFF001B980F /* pixel animation */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = squares;
+			path = "pixel animation";
 			sourceTree = "<group>";
 		};
-		9024CEDE2D622B58000E8000 /* squaresTests */ = {
+		90B227202D699D01001B980F /* pixel animationTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = squaresTests;
+			path = "pixel animationTests";
 			sourceTree = "<group>";
 		};
-		9024CEE82D622B58000E8000 /* squaresUITests */ = {
+		90B2272A2D699D01001B980F /* pixel animationUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = squaresUITests;
+			path = "pixel animationUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9024CEC82D622B57000E8000 /* Frameworks */ = {
+		90B2270A2D699CFF001B980F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9024CED82D622B58000E8000 /* Frameworks */ = {
+		90B2271A2D699D01001B980F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9024CEE22D622B58000E8000 /* Frameworks */ = {
+		90B227242D699D01001B980F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,22 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9024CEC22D622B57000E8000 = {
+		90B227042D699CFF001B980F = {
 			isa = PBXGroup;
 			children = (
-				9024CECD2D622B57000E8000 /* squares */,
-				9024CEDE2D622B58000E8000 /* squaresTests */,
-				9024CEE82D622B58000E8000 /* squaresUITests */,
-				9024CECC2D622B57000E8000 /* Products */,
+				90B2270F2D699CFF001B980F /* pixel animation */,
+				90B227202D699D01001B980F /* pixel animationTests */,
+				90B2272A2D699D01001B980F /* pixel animationUITests */,
+				90B2270E2D699CFF001B980F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9024CECC2D622B57000E8000 /* Products */ = {
+		90B2270E2D699CFF001B980F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9024CECB2D622B57000E8000 /* squares.app */,
-				9024CEDB2D622B58000E8000 /* squaresTests.xctest */,
-				9024CEE52D622B58000E8000 /* squaresUITests.xctest */,
+				90B2270D2D699CFF001B980F /* pixel animation.app */,
+				90B2271D2D699D01001B980F /* pixel animationTests.xctest */,
+				90B227272D699D01001B980F /* pixel animationUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,134 +95,134 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9024CECA2D622B57000E8000 /* squares */ = {
+		90B2270C2D699CFF001B980F /* pixel animation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9024CEEF2D622B58000E8000 /* Build configuration list for PBXNativeTarget "squares" */;
+			buildConfigurationList = 90B227312D699D01001B980F /* Build configuration list for PBXNativeTarget "pixel animation" */;
 			buildPhases = (
-				9024CEC72D622B57000E8000 /* Sources */,
-				9024CEC82D622B57000E8000 /* Frameworks */,
-				9024CEC92D622B57000E8000 /* Resources */,
+				90B227092D699CFF001B980F /* Sources */,
+				90B2270A2D699CFF001B980F /* Frameworks */,
+				90B2270B2D699CFF001B980F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				9024CECD2D622B57000E8000 /* squares */,
+				90B2270F2D699CFF001B980F /* pixel animation */,
 			);
-			name = squares;
+			name = "pixel animation";
 			packageProductDependencies = (
 			);
-			productName = squares;
-			productReference = 9024CECB2D622B57000E8000 /* squares.app */;
+			productName = "pixel animation";
+			productReference = 90B2270D2D699CFF001B980F /* pixel animation.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9024CEDA2D622B58000E8000 /* squaresTests */ = {
+		90B2271C2D699D01001B980F /* pixel animationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9024CEF22D622B58000E8000 /* Build configuration list for PBXNativeTarget "squaresTests" */;
+			buildConfigurationList = 90B227342D699D01001B980F /* Build configuration list for PBXNativeTarget "pixel animationTests" */;
 			buildPhases = (
-				9024CED72D622B58000E8000 /* Sources */,
-				9024CED82D622B58000E8000 /* Frameworks */,
-				9024CED92D622B58000E8000 /* Resources */,
+				90B227192D699D01001B980F /* Sources */,
+				90B2271A2D699D01001B980F /* Frameworks */,
+				90B2271B2D699D01001B980F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9024CEDD2D622B58000E8000 /* PBXTargetDependency */,
+				90B2271F2D699D01001B980F /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				9024CEDE2D622B58000E8000 /* squaresTests */,
+				90B227202D699D01001B980F /* pixel animationTests */,
 			);
-			name = squaresTests;
+			name = "pixel animationTests";
 			packageProductDependencies = (
 			);
-			productName = squaresTests;
-			productReference = 9024CEDB2D622B58000E8000 /* squaresTests.xctest */;
+			productName = "pixel animationTests";
+			productReference = 90B2271D2D699D01001B980F /* pixel animationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9024CEE42D622B58000E8000 /* squaresUITests */ = {
+		90B227262D699D01001B980F /* pixel animationUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9024CEF52D622B58000E8000 /* Build configuration list for PBXNativeTarget "squaresUITests" */;
+			buildConfigurationList = 90B227372D699D01001B980F /* Build configuration list for PBXNativeTarget "pixel animationUITests" */;
 			buildPhases = (
-				9024CEE12D622B58000E8000 /* Sources */,
-				9024CEE22D622B58000E8000 /* Frameworks */,
-				9024CEE32D622B58000E8000 /* Resources */,
+				90B227232D699D01001B980F /* Sources */,
+				90B227242D699D01001B980F /* Frameworks */,
+				90B227252D699D01001B980F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9024CEE72D622B58000E8000 /* PBXTargetDependency */,
+				90B227292D699D01001B980F /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				9024CEE82D622B58000E8000 /* squaresUITests */,
+				90B2272A2D699D01001B980F /* pixel animationUITests */,
 			);
-			name = squaresUITests;
+			name = "pixel animationUITests";
 			packageProductDependencies = (
 			);
-			productName = squaresUITests;
-			productReference = 9024CEE52D622B58000E8000 /* squaresUITests.xctest */;
+			productName = "pixel animationUITests";
+			productReference = 90B227272D699D01001B980F /* pixel animationUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9024CEC32D622B57000E8000 /* Project object */ = {
+		90B227052D699CFF001B980F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					9024CECA2D622B57000E8000 = {
+					90B2270C2D699CFF001B980F = {
 						CreatedOnToolsVersion = 16.0;
 					};
-					9024CEDA2D622B58000E8000 = {
+					90B2271C2D699D01001B980F = {
 						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 9024CECA2D622B57000E8000;
+						TestTargetID = 90B2270C2D699CFF001B980F;
 					};
-					9024CEE42D622B58000E8000 = {
+					90B227262D699D01001B980F = {
 						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 9024CECA2D622B57000E8000;
+						TestTargetID = 90B2270C2D699CFF001B980F;
 					};
 				};
 			};
-			buildConfigurationList = 9024CEC62D622B57000E8000 /* Build configuration list for PBXProject "squares" */;
+			buildConfigurationList = 90B227082D699CFF001B980F /* Build configuration list for PBXProject "pixel animation" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 9024CEC22D622B57000E8000;
+			mainGroup = 90B227042D699CFF001B980F;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 9024CECC2D622B57000E8000 /* Products */;
+			productRefGroup = 90B2270E2D699CFF001B980F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9024CECA2D622B57000E8000 /* squares */,
-				9024CEDA2D622B58000E8000 /* squaresTests */,
-				9024CEE42D622B58000E8000 /* squaresUITests */,
+				90B2270C2D699CFF001B980F /* pixel animation */,
+				90B2271C2D699D01001B980F /* pixel animationTests */,
+				90B227262D699D01001B980F /* pixel animationUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9024CEC92D622B57000E8000 /* Resources */ = {
+		90B2270B2D699CFF001B980F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9024CED92D622B58000E8000 /* Resources */ = {
+		90B2271B2D699D01001B980F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9024CEE32D622B58000E8000 /* Resources */ = {
+		90B227252D699D01001B980F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,21 +232,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9024CEC72D622B57000E8000 /* Sources */ = {
+		90B227092D699CFF001B980F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9024CED72D622B58000E8000 /* Sources */ = {
+		90B227192D699D01001B980F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9024CEE12D622B58000E8000 /* Sources */ = {
+		90B227232D699D01001B980F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,20 +256,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9024CEDD2D622B58000E8000 /* PBXTargetDependency */ = {
+		90B2271F2D699D01001B980F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9024CECA2D622B57000E8000 /* squares */;
-			targetProxy = 9024CEDC2D622B58000E8000 /* PBXContainerItemProxy */;
+			target = 90B2270C2D699CFF001B980F /* pixel animation */;
+			targetProxy = 90B2271E2D699D01001B980F /* PBXContainerItemProxy */;
 		};
-		9024CEE72D622B58000E8000 /* PBXTargetDependency */ = {
+		90B227292D699D01001B980F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9024CECA2D622B57000E8000 /* squares */;
-			targetProxy = 9024CEE62D622B58000E8000 /* PBXContainerItemProxy */;
+			target = 90B2270C2D699CFF001B980F /* pixel animation */;
+			targetProxy = 90B227282D699D01001B980F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		9024CEED2D622B58000E8000 /* Debug */ = {
+		90B2272F2D699D01001B980F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -332,7 +332,7 @@
 			};
 			name = Debug;
 		};
-		9024CEEE2D622B58000E8000 /* Release */ = {
+		90B227302D699D01001B980F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -388,14 +388,14 @@
 			};
 			name = Release;
 		};
-		9024CEF02D622B58000E8000 /* Debug */ = {
+		90B227322D699D01001B980F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"squares/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"pixel animation/Preview Content\"";
 				DEVELOPMENT_TEAM = H37UJVUBTF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -409,7 +409,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ricecakesmedia.squares;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.pixel-animation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -417,14 +417,14 @@
 			};
 			name = Debug;
 		};
-		9024CEF12D622B58000E8000 /* Release */ = {
+		90B227332D699D01001B980F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"squares/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"pixel animation/Preview Content\"";
 				DEVELOPMENT_TEAM = H37UJVUBTF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -438,7 +438,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ricecakesmedia.squares;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.pixel-animation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -446,7 +446,7 @@
 			};
 			name = Release;
 		};
-		9024CEF32D622B58000E8000 /* Debug */ = {
+		90B227352D699D01001B980F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,16 +456,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ricecakesmedia.squaresTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.pixel-animationTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/squares.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/squares";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pixel animation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pixel animation";
 			};
 			name = Debug;
 		};
-		9024CEF42D622B58000E8000 /* Release */ = {
+		90B227362D699D01001B980F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,16 +475,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ricecakesmedia.squaresTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.pixel-animationTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/squares.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/squares";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pixel animation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pixel animation";
 			};
 			name = Release;
 		};
-		9024CEF62D622B58000E8000 /* Debug */ = {
+		90B227382D699D01001B980F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -492,16 +492,16 @@
 				DEVELOPMENT_TEAM = H37UJVUBTF;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ricecakesmedia.squaresUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.pixel-animationUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = squares;
+				TEST_TARGET_NAME = "pixel animation";
 			};
 			name = Debug;
 		};
-		9024CEF72D622B58000E8000 /* Release */ = {
+		90B227392D699D01001B980F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -509,55 +509,55 @@
 				DEVELOPMENT_TEAM = H37UJVUBTF;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ricecakesmedia.squaresUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ricecakesmedia.pixel-animationUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = squares;
+				TEST_TARGET_NAME = "pixel animation";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9024CEC62D622B57000E8000 /* Build configuration list for PBXProject "squares" */ = {
+		90B227082D699CFF001B980F /* Build configuration list for PBXProject "pixel animation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9024CEED2D622B58000E8000 /* Debug */,
-				9024CEEE2D622B58000E8000 /* Release */,
+				90B2272F2D699D01001B980F /* Debug */,
+				90B227302D699D01001B980F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9024CEEF2D622B58000E8000 /* Build configuration list for PBXNativeTarget "squares" */ = {
+		90B227312D699D01001B980F /* Build configuration list for PBXNativeTarget "pixel animation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9024CEF02D622B58000E8000 /* Debug */,
-				9024CEF12D622B58000E8000 /* Release */,
+				90B227322D699D01001B980F /* Debug */,
+				90B227332D699D01001B980F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9024CEF22D622B58000E8000 /* Build configuration list for PBXNativeTarget "squaresTests" */ = {
+		90B227342D699D01001B980F /* Build configuration list for PBXNativeTarget "pixel animationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9024CEF32D622B58000E8000 /* Debug */,
-				9024CEF42D622B58000E8000 /* Release */,
+				90B227352D699D01001B980F /* Debug */,
+				90B227362D699D01001B980F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9024CEF52D622B58000E8000 /* Build configuration list for PBXNativeTarget "squaresUITests" */ = {
+		90B227372D699D01001B980F /* Build configuration list for PBXNativeTarget "pixel animationUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9024CEF62D622B58000E8000 /* Debug */,
-				9024CEF72D622B58000E8000 /* Release */,
+				90B227382D699D01001B980F /* Debug */,
+				90B227392D699D01001B980F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9024CEC32D622B57000E8000 /* Project object */;
+	rootObject = 90B227052D699CFF001B980F /* Project object */;
 }

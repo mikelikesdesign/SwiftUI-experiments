@@ -118,3 +118,7 @@ Drag around to see a colorful glow that changes in shape and color
 ## text animation
 Pinch in and out to see different text details
 [Demo](https://x.com/mikelikesdesign/status/1885506922302013919)
+
+## pixel animation
+Tap to generate pixel inspired animations
+[Demo](https://x.com/mikelikesdesign/status/1893149637697286554)

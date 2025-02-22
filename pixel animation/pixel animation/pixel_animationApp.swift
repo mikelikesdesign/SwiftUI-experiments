@@ -1,14 +1,14 @@
 //
-//  squaresApp.swift
-//  squares
+//  pixel_animationApp.swift
+//  pixel animation
 //
-//  Created by Michael Lee on 2/16/25.
+//  Created by Michael Lee on 2/22/25.
 //
 
 import SwiftUI
 
 @main
-struct squaresApp: App {
+struct pixel_animationApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -1,13 +1,13 @@
 //
-//  squaresUITestsLaunchTests.swift
-//  squaresUITests
+//  pixel_animationUITestsLaunchTests.swift
+//  pixel animationUITests
 //
-//  Created by Michael Lee on 2/16/25.
+//  Created by Michael Lee on 2/22/25.
 //
 
 import XCTest
 
-final class squaresUITestsLaunchTests: XCTestCase {
+final class pixel_animationUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

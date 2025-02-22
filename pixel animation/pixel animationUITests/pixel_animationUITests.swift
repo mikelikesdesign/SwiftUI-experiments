@@ -1,13 +1,13 @@
 //
-//  squaresUITests.swift
-//  squaresUITests
+//  pixel_animationUITests.swift
+//  pixel animationUITests
 //
-//  Created by Michael Lee on 2/16/25.
+//  Created by Michael Lee on 2/22/25.
 //
 
 import XCTest
 
-final class squaresUITests: XCTestCase {
+final class pixel_animationUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  squares
+//  pixel animation
 //
-//  Created by Michael Lee on 2/16/25.
+//  Created by Michael Lee on 2/22/25.
 //
 
 import SwiftUI
@@ -344,4 +344,5 @@ enum AnimationShape {
 #Preview {
     ContentView()
 }
+
 
