@@ -121,4 +121,3 @@ Pinch in and out to see different text details
 
 ## pixel animation
 Tap to generate pixel inspired animations, this example was made using mostly UIKit
-[Demo](https://x.com/mikelikesdesign/status/1893149637697286554)
