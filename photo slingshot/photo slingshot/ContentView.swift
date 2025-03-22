@@ -13,8 +13,7 @@ struct ContentView: View {
     
     @State private var dragOffset = CGSize.zero
     @State private var isDragging = false
-    @State private var showBanner = false
-    @State private var bannerOffset = UIScreen.main.bounds.height // Initially out of view
+    @State private var imageOpacity = 1.0
 
     var body: some View {
         ZStack {
@@ -24,6 +23,10 @@ struct ContentView: View {
                 .frame(width: 172, height: 194)
                 .cornerRadius(12)
                 .shadow(color: .black.opacity(0.1), radius: 8, x: 0, y: 0)
+                .opacity(imageOpacity)
+                .scaleEffect(isDragging ? 0.85 : 1.0)
+                .offset(isDragging ? dragOffset : .zero)
+                .animation(.interactiveSpring(response: 0.5, dampingFraction: 0.7, blendDuration: 0), value: isDragging)
                 .gesture(
                     DragGesture(minimumDistance: 0)
                         .onChanged { value in
@@ -37,18 +40,18 @@ struct ContentView: View {
                             if dragOffset.height > dragThreshold {
                                 withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.7, blendDuration: 0)) {
                                     dragOffset = CGSize(width: dragOffset.width, height: -screenHeight)
+                                    imageOpacity = 0
                                 }
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    isDragging = false
+                                    // Reset position while image is invisible
                                     dragOffset = .zero
-                                    bannerOffset = UIScreen.main.bounds.height  // Reset banner position
-                                    showBanner = true  // Ensure banner is shown
-                                    withAnimation(.easeInOut) {
-                                        bannerOffset = 0
-                                    }
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                        withAnimation(.easeInOut(duration: 0.5)) {
-                                            bannerOffset = UIScreen.main.bounds.height  // Slide out of view
+                                    isDragging = false
+                                    
+                                    // Small delay before fading in the new image
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                        // Fade in the new image
+                                        withAnimation(.easeIn(duration: 0.8)) {
+                                            imageOpacity = 1.0
                                         }
                                     }
                                 }
@@ -60,17 +63,6 @@ struct ContentView: View {
                             }
                         }
                 )
-            
-            if isDragging {
-                Image(mainImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 172, height: 194)
-                    .cornerRadius(12)
-                    .shadow(color: .black.opacity(0.1), radius: 8, x: 0, y: 0)
-                    .opacity(0.65)
-                    .offset(dragOffset)
-            }
             
             HStack(spacing: 16) {
                 ForEach(0..<avatarImages.count) { index in
@@ -91,24 +83,6 @@ struct ContentView: View {
             .padding(.top, 16)
             .animation(.interactiveSpring(response: 0.5, dampingFraction: 0.7, blendDuration: 0), value: isDragging)
         }
-        .overlay(
-            VStack {
-                Spacer()
-                if showBanner {
-                    Text("Message sent to Claire")
-                        .font(.system(size: 14))
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(width: 274, height: 52)
-                        .background(Color.black)
-                        .cornerRadius(100)
-                        .shadow(color: .black.opacity(0.15), radius: 8, x: 0, y: 0)
-                        .offset(y: bannerOffset)
-                }
-            }
-            .padding(.bottom, 48)
-            .animation(.easeInOut(duration: 0.5), value: bannerOffset)
-        )
     }
 }
 
