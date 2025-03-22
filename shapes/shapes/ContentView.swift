@@ -10,9 +10,12 @@ import SwiftUI
 struct ContentView: View {
     @State private var shapes: [ShapeData] = []
     @State private var lastShapePosition: CGPoint?
+    @State private var shapeTimer: Timer?
+    @State private var isDragging = false
     let animationDuration: Double = 0.7
-    let minDistanceBetweenShapes: CGFloat = 15 // Reduced from 20
-    let maxShapes: Int = 50 // Increased from 30
+    let minDistanceBetweenShapes: CGFloat = 15
+    let maxShapes: Int = 50
+    let holdGenerationInterval: Double = 0.1
     
     var body: some View {
         ZStack {
@@ -30,9 +33,18 @@ struct ContentView: View {
         .gesture(
             DragGesture(minimumDistance: 0)
                 .onChanged { value in
+                    if !isDragging {
+                        isDragging = true
+                        startShapeGeneration(at: value.location)
+                    }
+                    
                     if shouldAddShape(at: value.location) {
                         addShape(at: value.location)
                     }
+                }
+                .onEnded { _ in
+                    stopShapeGeneration()
+                    isDragging = false
                 }
         )
     }
@@ -66,6 +78,21 @@ struct ContentView: View {
     func distance(from p1: CGPoint, to p2: CGPoint) -> CGFloat {
         return sqrt(pow(p2.x - p1.x, 2) + pow(p2.y - p1.y, 2))
     }
+    
+    func startShapeGeneration(at initialLocation: CGPoint) {
+        addShape(at: initialLocation)
+        
+        shapeTimer = Timer.scheduledTimer(withTimeInterval: holdGenerationInterval, repeats: true) { _ in
+            if let lastPosition = lastShapePosition {
+                addShape(at: lastPosition)
+            }
+        }
+    }
+    
+    func stopShapeGeneration() {
+        shapeTimer?.invalidate()
+        shapeTimer = nil
+    }
 }
 
 struct ShapeData: Identifiable {
@@ -80,7 +107,7 @@ struct ShapeData: Identifiable {
     init(position: CGPoint) {
         self.position = position
         self.color = Color.random
-        self.size = CGFloat.random(in: 50...500) // Decreased lower bound from 100 to 50
+        self.size = CGFloat.random(in: 50...500)
         self.view = AnyShape(Self.randomShape())
     }
     
@@ -91,13 +118,12 @@ struct ShapeData: Identifiable {
             AnyShape(RoundedRectangle(cornerRadius: 25)),
             AnyShape(Capsule()),
             AnyShape(Ellipse()),
-            AnyShape(Triangle()) // Added Triangle
+            AnyShape(Triangle())
         ]
         return shapes.randomElement()!
     }
 }
 
-// Add this struct for the Triangle shape
 struct Triangle: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
