@@ -7,54 +7,35 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 Color.black
-                    .ignoresSafeArea(.all) // Ignore safe areas
+                    .ignoresSafeArea(.all)
 
                 VStack {
-                    // Header Text
                     Text("Customize Color")
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding(.top, 16)
 
-                    // Computer illustration
-                    Image("computer") // Replace with your image name
+                    Image("computer")
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: .infinity)
                         .overlay(
-                            // Colored rectangle overlaid on the image
                             Rectangle()
                                 .fill(selectedColor)
-                                .frame(width: 270, height: 240) // Adjust size as needed
+                                .frame(width: 270, height: 240)
                                 .cornerRadius(8)
                                 .offset(y: -24)
                         )
                         .clipped()
 
-                    Spacer().frame(height: 16) // 16px spacing between the image and color picker
+                    Spacer().frame(height: 16)
 
                     SpectrumColorPicker(selectedColor: $selectedColor)
                         .frame(width: 250, height: 240)
                         .clipShape(Circle())
-                        .padding(.top, 8) // 8px top padding for the color picker
+                        .padding(.top, 8)
 
-                    Spacer() // Spacer to center the "Next" button vertically
-                    Button(action: {
-                        // Add your action for the "Next" button here
-                    }) {
-                        Text("Next")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 24) // 24px left and right padding
-                            .padding(12)
-                            .background(Color(red: 0.09, green: 0.09, blue: 0.09))
-                            .cornerRadius(100) // 100px border radius
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 100)
-                                    .stroke(Color.white.opacity(0.1), lineWidth: 1) // 10% white opacity border stroke
-                            )
-                    }
-                    .padding(.bottom, 16) // Add bottom padding to the button
+                    Spacer()
                 }
             }
         }
@@ -64,11 +45,11 @@ struct ContentView: View {
 
 struct SpectrumColorPicker: View {
     @Binding var selectedColor: Color
+    @State private var indicatorPosition: CGPoint = .zero
 
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                // Circular gradient
                 Circle()
                     .fill(AngularGradient(gradient: Gradient(colors: Color.hueColors), center: .center))
                     .contentShape(Circle())
@@ -78,8 +59,31 @@ struct SpectrumColorPicker: View {
                                 let point = value.location
                                 let adjustedPoint = adjustPointToCircleBounds(point: point, in: geometry.size)
                                 selectedColor = getColor(at: adjustedPoint, in: geometry.size)
+                                indicatorPosition = adjustedPoint
                             }
                     )
+                
+                // Color indicator
+                Circle()
+                    .fill(selectedColor)
+                    .frame(width: 34, height: 34)
+                    .overlay(
+                        Circle()
+                            .stroke(Color.white, lineWidth: 2)
+                    )
+                    .overlay(
+                        Circle()
+                            .fill(.ultraThinMaterial)
+                            .opacity(0.3)
+                    )
+                    .shadow(color: Color.black.opacity(0.5), radius: 6, x: 0, y: 3)
+                    .position(indicatorPosition)
+                    .opacity(indicatorPosition == .zero ? 0 : 1)
+            }
+            .onAppear {
+                // Set initial indicator position at center
+                let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                indicatorPosition = center
             }
         }
     }
