@@ -48,6 +48,7 @@ struct ContentView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: imageSize, height: imageSize)
+                        .animation(.spring(dampingFraction: 0.7), value: imageSize)
                         .position(dragPosition)
                         .gesture(
                             DragGesture()
