@@ -22,10 +22,12 @@ struct ContentView: View {
 
                     TextField("Search...", text: $searchText)
                         .font(.system(size: 16))
+                        .foregroundColor(.white)
                         .padding(.leading, 15)
                         .frame(width: UIScreen.main.bounds.width * 0.8, height: 54)
                 }
                 .padding()
+                .colorScheme(.dark) // Force dark appearance in all modes
             }
         }
     }
