@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var inputNumber: String = ""
     @State private var hasInputChanged: Bool = false
-    @State private var isReversed: Bool = false // State to keep track of the swap
+    @State private var isReversed: Bool = false
 
     var conversions: [Conversion] {
         if isReversed {
@@ -88,10 +88,9 @@ struct ContentView: View {
                 self.hasInputChanged.toggle()
             })
                 .font(.largeTitle)
-                .foregroundColor(.black)
+                .foregroundColor(.primary)
                 .keyboardType(.numberPad)
                 .padding()
-                .background(Color(red: 249/255, green: 249/255, blue: 249/255))
                 .cornerRadius(10)
             
             ScrollView {
@@ -105,7 +104,7 @@ struct ContentView: View {
                 }
             }
         }
-        .background(Color(red: 249/255, green: 249/255, blue: 249/255))
+        .background(Color(UIColor.systemBackground))
         .foregroundColor(Color(red: 0, green: 224/255, blue: 117/255))
         .onTapGesture {
             hideKeyboard()
@@ -133,7 +132,7 @@ struct ConversionView: View {
             Text(label)
                 .font(.body)
                 .fontWeight(.regular)
-                .foregroundColor(Color(red: 70/255, green: 74/255, blue: 72/255))
+                .foregroundColor(.secondary)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
             Text(output)
