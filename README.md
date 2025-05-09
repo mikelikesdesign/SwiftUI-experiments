@@ -129,3 +129,7 @@ Tap and drag to adjust between different radial menu options
 ## pixel animation menu
 A pixel animation where you can adjust the animation settings in a menu
 [Demo](https://x.com/mikelikesdesign/status/1900764231605358723)
+
+## draggable slider
+A slider you can adjust and drag around on the screen
+[Demo](https://x.com/mikelikesdesign/status/1920110828931690700)
