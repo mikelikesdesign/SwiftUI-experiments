@@ -137,3 +137,7 @@ A slider you can adjust and drag around on the screen
 ## tilt grid
 A grid of colorful cards that scrolls and scales when you tilt your device
 [Demo](https://x.com/mikelikesdesign/status/1914281464574935109)
+
+## pixel shapes
+A 3D pixelated globe that auto rotates and you can interact with
+[Demo](https://x.com/mikelikesdesign/status/1920797263493824656)
