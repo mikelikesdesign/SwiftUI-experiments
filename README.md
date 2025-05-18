@@ -141,3 +141,7 @@ A grid of colorful cards that scrolls and scales when you tilt your device
 ## pixel shapes
 A 3D pixelated globe that auto rotates and you can interact with
 [Demo](https://x.com/mikelikesdesign/status/1920797263493824656)
+
+## bouncy grid
+A grid of animated lines dynamically bends and bounces in response to gestures
+[Demo](https://x.com/mikelikesdesign/status/1923911302604521874)
