@@ -1,3 +1,10 @@
+//
+//  ContentView.swift
+//  retro computer color picker
+//
+//  Created by https://github.com/mikelikesdesign
+//
+
 import SwiftUI
 
 struct DraggableShape: View {
