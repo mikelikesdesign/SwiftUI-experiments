@@ -1,3 +1,10 @@
+//
+//  ContentView.swift
+//  retro computer color picker
+//
+//  Created by https://github.com/mikelikesdesign
+//
+
 import SwiftUI
 
 struct ContentView: View {
@@ -59,7 +66,9 @@ struct SpectrumColorPicker: View {
                                 let point = value.location
                                 let adjustedPoint = adjustPointToCircleBounds(point: point, in: geometry.size)
                                 selectedColor = getColor(at: adjustedPoint, in: geometry.size)
-                                indicatorPosition = adjustedPoint
+                                withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+                                    indicatorPosition = adjustedPoint
+                                }
                             }
                     )
                 
