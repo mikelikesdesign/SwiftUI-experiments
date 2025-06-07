@@ -145,3 +145,7 @@ A 3D pixelated globe that auto rotates and you can interact with
 ## bouncy grid
 A grid of animated lines dynamically bends and bounces in response to gestures
 [Demo](https://x.com/mikelikesdesign/status/1923911302604521874)
+
+## waves
+An animated wave you can interact with
+[Demo](https://x.com/mikelikesdesign/status/1926428571586712012)
