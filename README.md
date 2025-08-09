@@ -149,3 +149,7 @@ A grid of animated lines dynamically bends and bounces in response to gestures
 ## waves
 An animated wave you can interact with
 [Demo](https://x.com/mikelikesdesign/status/1926428571586712012)
+
+## wave pattern
+Interactive hexagon wave grid
+[Demo](https://x.com/mikelikesdesign/status/1950064942834487438)
