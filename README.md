@@ -153,3 +153,7 @@ An animated wave you can interact with
 ## wave pattern
 Interactive hexagon wave grid
 [Demo](https://x.com/mikelikesdesign/status/1950064942834487438)
+
+## eye drawing
+A way to draw with your eyes
+[Demo](https://x.com/mikelikesdesign/status/1961293308006981651)
