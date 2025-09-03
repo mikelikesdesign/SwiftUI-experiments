@@ -15,7 +15,7 @@ struct DrawingPath {
 }
 
 class EyeTrackingViewModel: NSObject, ObservableObject, ARSessionDelegate {
-    @Published var eyePosition = CGPoint.zero
+    @Published var eyePosition = CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
     @Published var isTracking = false
     @Published var drawingPaths: [DrawingPath] = []
     @Published var isDrawing = true
