@@ -142,7 +142,8 @@ struct ConversionView: View {
                 .minimumScaleFactor(0.5)
                 .allowsTightening(true)
                 .frame(alignment: .trailing)
-                .animation(.smooth(duration: 0.1), value: output)
+                .contentTransition(.numericText())
+                .animation(.smooth(duration: 0.3), value: output)
         }
         .frame(height: 50)
         .padding(.horizontal)
