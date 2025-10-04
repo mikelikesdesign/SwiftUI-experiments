@@ -62,8 +62,8 @@ class MetalView: UIView {
         for i in 0..<numPoints {
             let angle = (2.0 * .pi * Double(i)) / Double(numPoints)
             points.append(CGPoint(
-                x: cos(angle) * radius,
-                y: sin(angle) * radius
+                x: CGFloat(cos(angle)) * radius,
+                y: CGFloat(sin(angle)) * radius
             ))
             velocities.append(.zero)
         }

@@ -11,6 +11,12 @@ struct ContentView: View {
     @State private var inputNumber: String = ""
     @State private var hasInputChanged: Bool = false
     @State private var isReversed: Bool = false
+    
+    // Conversion constants
+    let kgPerPound = 0.45359237
+    let mPerFoot   = 0.3048
+    let cmPerInch  = 2.54
+    let kmPerMile  = 1.609344
 
     var conversions: [Conversion] {
         if isReversed {
@@ -44,42 +50,42 @@ struct ContentView: View {
 
     var poundsToKilograms: Double {
         guard let number = Double(inputNumber) else { return 0 }
-        return number * 0.45359237
+        return number * kgPerPound
     }
 
     var kilogramsToPounds: Double {
         guard let number = Double(inputNumber) else { return 0 }
-        return number / 0.45359237
+        return number / kgPerPound
     }
 
     var milesToKilometers: Double {
         guard let number = Double(inputNumber) else { return 0 }
-        return number * 1.60934
+        return number * kmPerMile
     }
 
     var kilometersToMiles: Double {
         guard let number = Double(inputNumber) else { return 0 }
-        return number / 1.60934
+        return number / kmPerMile
     }
 
     var feetToMeters: Double {
         guard let number = Double(inputNumber) else { return 0 }
-        return number * 0.3048
+        return number * mPerFoot
     }
 
     var metersToFeet: Double {
         guard let number = Double(inputNumber) else { return 0 }
-        return number / 0.3048
+        return number / mPerFoot
     }
 
     var inchesToCentimeters: Double {
         guard let number = Double(inputNumber) else { return 0 }
-        return number * 2.54
+        return number * cmPerInch
     }
 
     var centimetersToInches: Double {
         guard let number = Double(inputNumber) else { return 0 }
-        return number / 2.54
+        return number / cmPerInch
     }
 
     var body: some View {
@@ -142,7 +148,7 @@ struct ConversionView: View {
                 .minimumScaleFactor(0.5)
                 .allowsTightening(true)
                 .frame(alignment: .trailing)
-                .contentTransition(.numericText())
+                .contentTransition(.numericText(value: Double(output) ?? 0))
                 .animation(.smooth(duration: 0.3), value: output)
         }
         .frame(height: 50)
