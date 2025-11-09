@@ -24,7 +24,6 @@ A prototype that shows an interaction on how to re-arrange your iOS navigation
 
 ## fried chicken
 Tap to show various fried chicken particles
-[Demo](https://posts.cv/mikelee/Zbk1AqdTY64tupTyxkkH)
 
 ## globe
 An animated globe with an interesting pattern
@@ -47,7 +46,6 @@ A slider to view animated particles in different states
 
 ## photo slingshot
 A prototype to slingshot photos that explores more drag gestures
-[Demo](https://posts.cv/mikelee/AlZcqGGmkCNKvWcVcbO7)
 
 ## photo bubbles
 Tap to see a random image animate into view
