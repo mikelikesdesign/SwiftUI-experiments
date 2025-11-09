@@ -2,40 +2,38 @@
 //  ContentView.swift
 //  walk charts
 //
-//  Created by Michael Lee on 7/24/24.
+//  Created by @mikelikesdesign
 //
 
 import SwiftUI
 import Charts
 
+class PageVisibilityManager: ObservableObject {
+    @Published var visiblePageIndex: Int = 0
+    @Published var animationTrigger: UUID = UUID()
+    
+    func pageBecameVisible(_ index: Int) {
+        visiblePageIndex = index
+        animationTrigger = UUID()
+    }
+}
+
 struct ContentView: View {
+    @StateObject private var pageVisibilityManager = PageVisibilityManager()
     @State private var currentPage = 0
-    @State private var firstPageID = UUID()
-    @State private var secondPageID = UUID()
-    @State private var thirdPageID = UUID()
-    @State private var fourthPageID = UUID()
-    @State private var fifthPageID = UUID()
     
     var body: some View {
         VerticalPageViewController(
             pages: [
-                AnyView(FirstPage().id(firstPageID)),
-                AnyView(AreaChartPage().id(fourthPageID)),
-                AnyView(SecondPage().id(secondPageID)),
-                AnyView(DonutChartPage().id(fifthPageID)),
-                AnyView(ThirdPage().id(thirdPageID))
+                AnyView(FirstPage(pageIndex: 0, visibilityManager: pageVisibilityManager)),
+                AnyView(AreaChartPage(pageIndex: 1, visibilityManager: pageVisibilityManager)),
+                AnyView(SecondPage(pageIndex: 2, visibilityManager: pageVisibilityManager)),
+                AnyView(DonutChartPage(pageIndex: 3, visibilityManager: pageVisibilityManager)),
+                AnyView(ThirdPage(pageIndex: 4, visibilityManager: pageVisibilityManager))
             ],
             currentPage: $currentPage,
             pageChanged: { newPage in
-                // Regenerate the ID for the new page to force a reload
-                switch newPage {
-                case 0: firstPageID = UUID()
-                case 1: fourthPageID = UUID()
-                case 2: secondPageID = UUID()
-                case 3: fifthPageID = UUID()
-                case 4: thirdPageID = UUID()
-                default: break
-                }
+                pageVisibilityManager.pageBecameVisible(newPage)
             }
         )
         .edgesIgnoringSafeArea(.all)
@@ -57,45 +55,69 @@ struct VerticalPageViewController: UIViewControllerRepresentable {
             navigationOrientation: .vertical)
         pageViewController.dataSource = context.coordinator
         pageViewController.delegate = context.coordinator
+        let initialController = context.coordinator.createController(for: currentPage)
         pageViewController.setViewControllers(
-            [context.coordinator.controllers[currentPage]],
+            [initialController],
             direction: .forward,
             animated: true)
         return pageViewController
     }
 
     func updateUIViewController(_ pageViewController: UIPageViewController, context: Context) {
-        pageViewController.setViewControllers(
-            [context.coordinator.controllers[currentPage]],
-            direction: .forward,
-            animated: true)
+        context.coordinator.parent = self
+        if let currentVC = pageViewController.viewControllers?.first,
+           let currentIndex = context.coordinator.getIndex(for: currentVC),
+           currentIndex != currentPage {
+            let newController = context.coordinator.createController(for: currentPage)
+            pageViewController.setViewControllers(
+                [newController],
+                direction: currentPage > currentIndex ? .forward : .reverse,
+                animated: true)
+        }
     }
 
     class Coordinator: NSObject, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
         var parent: VerticalPageViewController
-        var controllers: [UIViewController]
-
+        var controllerToIndex: [UIViewController: Int] = [:]
+        
         init(_ pageViewController: VerticalPageViewController) {
             parent = pageViewController
-            controllers = parent.pages.map { UIHostingController(rootView: $0) }
+        }
+        
+        func getIndex(for viewController: UIViewController) -> Int? {
+            return controllerToIndex[viewController]
+        }
+        
+        func createController(for index: Int) -> UIViewController {
+            let controller = UIHostingController(rootView: parent.pages[index])
+            controllerToIndex[controller] = index
+            return controller
         }
 
         func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-            guard let index = controllers.firstIndex(of: viewController) else { return nil }
-            if index == 0 { return nil }
-            return controllers[index - 1]
+            guard let currentIndex = controllerToIndex[viewController] else {
+                let currentIndex = parent.currentPage
+                if currentIndex == 0 { return nil }
+                return createController(for: currentIndex - 1)
+            }
+            if currentIndex == 0 { return nil }
+            return createController(for: currentIndex - 1)
         }
 
         func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-            guard let index = controllers.firstIndex(of: viewController) else { return nil }
-            if index + 1 == controllers.count { return nil }
-            return controllers[index + 1]
+            guard let currentIndex = controllerToIndex[viewController] else {
+                let currentIndex = parent.currentPage
+                if currentIndex + 1 >= parent.pages.count { return nil }
+                return createController(for: currentIndex + 1)
+            }
+            if currentIndex + 1 >= parent.pages.count { return nil }
+            return createController(for: currentIndex + 1)
         }
 
         func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
             if completed,
                let visibleViewController = pageViewController.viewControllers?.first,
-               let index = controllers.firstIndex(of: visibleViewController) {
+               let index = controllerToIndex[visibleViewController] {
                 parent.currentPage = index
                 parent.pageChanged(index)
             }
@@ -104,6 +126,8 @@ struct VerticalPageViewController: UIViewControllerRepresentable {
 }
 
 struct FirstPage: View {
+    let pageIndex: Int
+    @ObservedObject var visibilityManager: PageVisibilityManager
     @State private var animationProgress: CGFloat = 0
     
     var body: some View {
@@ -118,7 +142,26 @@ struct FirstPage: View {
             }
             .padding()
         }
+        .onChange(of: visibilityManager.visiblePageIndex) {
+            if visibilityManager.visiblePageIndex == pageIndex {
+                triggerAnimation()
+            }
+        }
+        .onChange(of: visibilityManager.animationTrigger) {
+            if visibilityManager.visiblePageIndex == pageIndex {
+                triggerAnimation()
+            }
+        }
         .onAppear {
+            if visibilityManager.visiblePageIndex == pageIndex {
+                triggerAnimation()
+            }
+        }
+    }
+    
+    private func triggerAnimation() {
+        animationProgress = 0
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             withAnimation(.easeInOut(duration: 1)) {
                 animationProgress = 1
             }
@@ -161,6 +204,8 @@ struct FirstPage: View {
 }
 
 struct SecondPage: View {
+    let pageIndex: Int
+    @ObservedObject var visibilityManager: PageVisibilityManager
     @State private var animationProgress: CGFloat = 0
     
     var body: some View {
@@ -175,7 +220,26 @@ struct SecondPage: View {
             }
             .padding()
         }
+        .onChange(of: visibilityManager.visiblePageIndex) {
+            if visibilityManager.visiblePageIndex == pageIndex {
+                triggerAnimation()
+            }
+        }
+        .onChange(of: visibilityManager.animationTrigger) {
+            if visibilityManager.visiblePageIndex == pageIndex {
+                triggerAnimation()
+            }
+        }
         .onAppear {
+            if visibilityManager.visiblePageIndex == pageIndex {
+                triggerAnimation()
+            }
+        }
+    }
+    
+    private func triggerAnimation() {
+        animationProgress = 0
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             withAnimation(.easeInOut(duration: 1)) {
                 animationProgress = 1
             }
@@ -229,6 +293,8 @@ struct SecondPage: View {
 }
 
 struct ThirdPage: View {
+    let pageIndex: Int
+    @ObservedObject var visibilityManager: PageVisibilityManager
     @State private var animationProgress: CGFloat = 0
     
     var body: some View {
@@ -243,7 +309,26 @@ struct ThirdPage: View {
             }
             .padding()
         }
+        .onChange(of: visibilityManager.visiblePageIndex) {
+            if visibilityManager.visiblePageIndex == pageIndex {
+                triggerAnimation()
+            }
+        }
+        .onChange(of: visibilityManager.animationTrigger) {
+            if visibilityManager.visiblePageIndex == pageIndex {
+                triggerAnimation()
+            }
+        }
         .onAppear {
+            if visibilityManager.visiblePageIndex == pageIndex {
+                triggerAnimation()
+            }
+        }
+    }
+    
+    private func triggerAnimation() {
+        animationProgress = 0
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             withAnimation(.easeInOut(duration: 1)) {
                 animationProgress = 1
             }
@@ -290,6 +375,8 @@ struct ThirdPage: View {
 }
 
 struct AreaChartPage: View {
+    let pageIndex: Int
+    @ObservedObject var visibilityManager: PageVisibilityManager
     @State private var animationProgress: CGFloat = 0
     
     var body: some View {
@@ -304,7 +391,26 @@ struct AreaChartPage: View {
             }
             .padding()
         }
+        .onChange(of: visibilityManager.visiblePageIndex) {
+            if visibilityManager.visiblePageIndex == pageIndex {
+                triggerAnimation()
+            }
+        }
+        .onChange(of: visibilityManager.animationTrigger) {
+            if visibilityManager.visiblePageIndex == pageIndex {
+                triggerAnimation()
+            }
+        }
         .onAppear {
+            if visibilityManager.visiblePageIndex == pageIndex {
+                triggerAnimation()
+            }
+        }
+    }
+    
+    private func triggerAnimation() {
+        animationProgress = 0
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             withAnimation(.easeInOut(duration: 1)) {
                 animationProgress = 1
             }
@@ -341,7 +447,6 @@ struct AreaChartPage: View {
                 .foregroundStyle(Color(hex: "76A32C"))
                 .lineStyle(StrokeStyle(lineWidth: 2.5))
                 
-                // Add marker for the final total only
                 if data.day == 31 {
                     PointMark(
                         x: .value("Day", data.day),
@@ -359,13 +464,13 @@ struct AreaChartPage: View {
                 }
             }
         }
+        .chartXScale(domain: 0.5...31.5)
         .chartYScale(domain: 0...59500)
         .chartXAxis {
-            AxisMarks(values: .automatic(desiredCount: 5)) { value in
+            AxisMarks(values: [1, 8, 15, 22, 31]) { value in
                 AxisGridLine()
-                AxisTick()
                 AxisValueLabel {
-                    if let day = value.as(Int.self), day <= dailyStepsJuly.count, day > 0 {
+                    if let day = value.as(Int.self) {
                         Text("Jul \(day)")
                             .font(.caption)
                             .foregroundStyle(Color(hex: "76A32C"))
@@ -374,7 +479,7 @@ struct AreaChartPage: View {
             }
         }
         .chartYAxis {
-            AxisMarks(position: .leading) { value in
+            AxisMarks(position: .leading, values: .stride(by: 14875)) { value in
                 AxisGridLine().foregroundStyle(Color(hex: "76A32C").opacity(0.2))
                 AxisTick().foregroundStyle(Color(hex: "76A32C"))
                 AxisValueLabel {
@@ -390,6 +495,8 @@ struct AreaChartPage: View {
 }
 
 struct DonutChartPage: View {
+    let pageIndex: Int
+    @ObservedObject var visibilityManager: PageVisibilityManager
     @State private var animationProgress: CGFloat = 0
     
     var body: some View {
@@ -405,7 +512,26 @@ struct DonutChartPage: View {
             }
             .padding()
         }
+        .onChange(of: visibilityManager.visiblePageIndex) {
+            if visibilityManager.visiblePageIndex == pageIndex {
+                triggerAnimation()
+            }
+        }
+        .onChange(of: visibilityManager.animationTrigger) {
+            if visibilityManager.visiblePageIndex == pageIndex {
+                triggerAnimation()
+            }
+        }
         .onAppear {
+            if visibilityManager.visiblePageIndex == pageIndex {
+                triggerAnimation()
+            }
+        }
+    }
+    
+    private func triggerAnimation() {
+        animationProgress = 0
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             withAnimation(.easeInOut(duration: 1)) {
                 animationProgress = 1
             }
@@ -481,11 +607,11 @@ extension Color {
         Scanner(string: hex).scanHexInt64(&int)
         let a, r, g, b: UInt64
         switch hex.count {
-        case 3: // RGB (12-bit)
+        case 3:
             (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-        case 6: // RGB (24-bit)
+        case 6:
             (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-        case 8: // ARGB (32-bit)
+        case 8:
             (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
         default:
             (a, r, g, b) = (1, 1, 1, 0)
@@ -501,42 +627,40 @@ extension Color {
     }
 }
 
-// Sample data for the line chart
 let dailyStepsJuly: [DailyStepData] = [
-    DailyStepData(day: "Jul 1", steps: 1700, isWeekend: false),
-    DailyStepData(day: "Jul 2", steps: 1800, isWeekend: true),
-    DailyStepData(day: "Jul 3", steps: 1900, isWeekend: true),
-    DailyStepData(day: "Jul 4", steps: 1600, isWeekend: false),
-    DailyStepData(day: "Jul 5", steps: 1750, isWeekend: false),
-    DailyStepData(day: "Jul 6", steps: 1800, isWeekend: false),
-    DailyStepData(day: "Jul 7", steps: 1650, isWeekend: false),
-    DailyStepData(day: "Jul 8", steps: 1900, isWeekend: true),
-    DailyStepData(day: "Jul 9", steps: 2100, isWeekend: true),
-    DailyStepData(day: "Jul 10", steps: 1700, isWeekend: false),
-    DailyStepData(day: "Jul 11", steps: 1850, isWeekend: false),
-    DailyStepData(day: "Jul 12", steps: 1950, isWeekend: false),
-    DailyStepData(day: "Jul 13", steps: 1800, isWeekend: false),
-    DailyStepData(day: "Jul 14", steps: 1750, isWeekend: false),
-    DailyStepData(day: "Jul 15", steps: 2200, isWeekend: true),
-    DailyStepData(day: "Jul 16", steps: 2300, isWeekend: true),
-    DailyStepData(day: "Jul 17", steps: 1900, isWeekend: false),
-    DailyStepData(day: "Jul 18", steps: 2000, isWeekend: false),
-    DailyStepData(day: "Jul 19", steps: 2100, isWeekend: false),
-    DailyStepData(day: "Jul 20", steps: 2050, isWeekend: false),
-    DailyStepData(day: "Jul 21", steps: 1950, isWeekend: false),
-    DailyStepData(day: "Jul 22", steps: 2400, isWeekend: true),
-    DailyStepData(day: "Jul 23", steps: 2500, isWeekend: true),
-    DailyStepData(day: "Jul 24", steps: 2100, isWeekend: false),
-    DailyStepData(day: "Jul 25", steps: 2200, isWeekend: false),
-    DailyStepData(day: "Jul 26", steps: 2150, isWeekend: false),
-    DailyStepData(day: "Jul 27", steps: 2300, isWeekend: false),
-    DailyStepData(day: "Jul 28", steps: 2200, isWeekend: false),
-    DailyStepData(day: "Jul 29", steps: 2600, isWeekend: true),
-    DailyStepData(day: "Jul 30", steps: 2700, isWeekend: true),
-    DailyStepData(day: "Jul 31", steps: 2600, isWeekend: false)
+    DailyStepData(day: "Jul 1", steps: 1593, isWeekend: false),
+    DailyStepData(day: "Jul 2", steps: 1687, isWeekend: true),
+    DailyStepData(day: "Jul 3", steps: 1780, isWeekend: true),
+    DailyStepData(day: "Jul 4", steps: 1499, isWeekend: false),
+    DailyStepData(day: "Jul 5", steps: 1640, isWeekend: false),
+    DailyStepData(day: "Jul 6", steps: 1687, isWeekend: false),
+    DailyStepData(day: "Jul 7", steps: 1546, isWeekend: false),
+    DailyStepData(day: "Jul 8", steps: 1780, isWeekend: true),
+    DailyStepData(day: "Jul 9", steps: 1968, isWeekend: true),
+    DailyStepData(day: "Jul 10", steps: 1593, isWeekend: false),
+    DailyStepData(day: "Jul 11", steps: 1733, isWeekend: false),
+    DailyStepData(day: "Jul 12", steps: 1827, isWeekend: false),
+    DailyStepData(day: "Jul 13", steps: 1687, isWeekend: false),
+    DailyStepData(day: "Jul 14", steps: 1640, isWeekend: false),
+    DailyStepData(day: "Jul 15", steps: 2061, isWeekend: true),
+    DailyStepData(day: "Jul 16", steps: 2155, isWeekend: true),
+    DailyStepData(day: "Jul 17", steps: 1780, isWeekend: false),
+    DailyStepData(day: "Jul 18", steps: 1874, isWeekend: false),
+    DailyStepData(day: "Jul 19", steps: 1968, isWeekend: false),
+    DailyStepData(day: "Jul 20", steps: 1921, isWeekend: false),
+    DailyStepData(day: "Jul 21", steps: 1827, isWeekend: false),
+    DailyStepData(day: "Jul 22", steps: 2249, isWeekend: true),
+    DailyStepData(day: "Jul 23", steps: 2343, isWeekend: true),
+    DailyStepData(day: "Jul 24", steps: 1968, isWeekend: false),
+    DailyStepData(day: "Jul 25", steps: 2061, isWeekend: false),
+    DailyStepData(day: "Jul 26", steps: 2015, isWeekend: false),
+    DailyStepData(day: "Jul 27", steps: 2155, isWeekend: false),
+    DailyStepData(day: "Jul 28", steps: 2061, isWeekend: false),
+    DailyStepData(day: "Jul 29", steps: 2436, isWeekend: true),
+    DailyStepData(day: "Jul 30", steps: 2530, isWeekend: true),
+    DailyStepData(day: "Jul 31", steps: 2436, isWeekend: false)
 ]
 
-// Activity data for the donut chart
 let activityData: [ActivityData] = [
     ActivityData(name: "Casual Walking", steps: 35700, percentage: 60, color: Color(hex: "156C8A")),
     ActivityData(name: "Running", steps: 11900, percentage: 20, color: Color(hex: "2A9EB8")),
@@ -560,7 +684,6 @@ struct ActivityData: Identifiable {
     let color: Color
 }
 
-// Calculate cumulative steps for area chart
 let cumulativeStepsJuly: [CumulativeStepData] = {
     var cumulative = 0
     var result: [CumulativeStepData] = []
@@ -575,15 +698,7 @@ let cumulativeStepsJuly: [CumulativeStepData] = {
         ))
     }
     
-    // Scale the final result to ensure the last point is exactly 59,500
-    let scaleFactor = 59500.0 / Double(result.last?.steps ?? 59500)
-    return result.map { dataPoint in
-        CumulativeStepData(
-            day: dataPoint.day,
-            steps: Int(Double(dataPoint.steps) * scaleFactor),
-            milestone: false
-        )
-    }
+    return result
 }()
 
 struct CumulativeStepData: Identifiable {
