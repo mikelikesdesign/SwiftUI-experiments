@@ -11,7 +11,7 @@ A prototype that shows an interaction on how AI can summarize text
 
 ## calculator metric
 A prototype that converts numbers to the metric system
-[Demo](https://posts.cv/mikelee/5wcdGx5M7wjGXZFCpzFp)
+[Demo](https://x.com/mikelikesdesign/status/1973109444151300583)
 
 ## drag to delete
 A prototype that shows a drag to delete interaction
