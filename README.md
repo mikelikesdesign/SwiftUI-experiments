@@ -156,6 +156,6 @@ Interactive hexagon wave grid
 A way to draw with your eyes
 [Demo](https://x.com/mikelikesdesign/status/1961293308006981651)
 
-## text interaction
+## text scroll interaction
 A 3D scrolling text effect
 [Demo](https://x.com/mikelikesdesign/status/1988786039331356692)
