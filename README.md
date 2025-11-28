@@ -128,6 +128,8 @@ Drag around to see a colorful glow that changes in shape and color
 Pinch in and out to see different text details
 [Demo](https://x.com/mikelikesdesign/status/1885506922302013919)
 
+https://github.com/user-attachments/assets/3a5da6fd-4bac-44c6-9d8e-23e960c04af7
+
 ## pixel animation
 Tap to generate pixel inspired animations, this example was made using mostly UIKit
 
