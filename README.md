@@ -84,6 +84,8 @@ Animated walking charts based on walking data
 Drag around to see random shapes generated that vary in shape type, color and size
 [Demo](https://x.com/mikelikesdesign/status/1834208983193976976)
 
+https://github.com/user-attachments/assets/a2caf7ae-0efc-452e-be17-e6a0cda16dd6
+
 ## paper navigation
 Drag around to jump to different pages quickly
 [Demo](https://x.com/mikelikesdesign/status/1834568721177731268)
