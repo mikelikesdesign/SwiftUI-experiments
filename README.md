@@ -98,6 +98,8 @@ Sign your signature to authenticate
 Bouncy dots with haptic feedback
 [Demo](https://x.com/mikelikesdesign/status/1850386083202396554)
 
+https://github.com/user-attachments/assets/df85ed2b-c9be-40f8-912c-f3e92446b779
+
 ## word slider interaction
 A slider interaction to adjust the tone of the content
 [Demo](https://x.com/mikelikesdesign/status/1855043920109223998)
