@@ -20,7 +20,7 @@ A prototype that shows a drag to delete interaction
 ## drag transform
 A prototype that shows an interaction on how to re-arrange your iOS navigation
 [Demo](https://x.com/mikelikesdesign/status/1737868104884273329)
-![Draggable navigation demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/drag%20transform/draggable%20navigation.gif?raw=true)
+https://github.com/user-attachments/assets/1cface78-612c-4ca8-996c-f9d70b8202ba
 
 ## fried chicken
 Tap to show various fried chicken particles
