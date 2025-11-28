@@ -61,6 +61,8 @@ Tap to see a random image animate into view
 Pull to search interaction inspired by the Things app
 [Demo](https://x.com/mikelikesdesign/status/1798157087203311927)
 
+https://github.com/user-attachments/assets/498df2ab-8bb6-4f64-bc08-8c1e3c785183
+
 ## reading tracker
 Get inspiring messages as the reader continues reading
 [Demo](https://x.com/mikelikesdesign/status/1788135346750017682)
