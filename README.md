@@ -172,3 +172,5 @@ A way to draw with your eyes
 ## text scroll interaction
 A 3D scrolling text effect
 [Demo](https://x.com/mikelikesdesign/status/1988786039331356692)
+
+https://github.com/user-attachments/assets/7081ae2a-97d8-4327-bfa8-48e064767987
