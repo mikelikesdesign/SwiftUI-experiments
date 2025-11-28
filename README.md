@@ -37,6 +37,8 @@ An animated globe with an interesting pattern
 An exploration looking at various drag gestures and animations
 [Demo](https://x.com/mikelikesdesign/status/1804383891471401380)
 
+https://github.com/user-attachments/assets/5b899097-d19f-499a-b36f-2c4f5422c78b
+
 ## map explore
 Drag around the map to get a restaurant recommendation
 [Demo](https://x.com/mikelikesdesign/status/1813480924589486255)
