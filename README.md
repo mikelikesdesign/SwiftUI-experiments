@@ -13,6 +13,8 @@ A prototype that shows an interaction on how AI can summarize text
 A prototype that converts numbers to the metric system
 [Demo](https://x.com/mikelikesdesign/status/1973109444151300583)
 
+https://github.com/user-attachments/assets/5762ef74-0ac2-4859-b211-35ab5ad3d0e6
+
 ## drag to delete
 A prototype that shows a drag to delete interaction
 [Demo](https://x.com/mikelikesdesign/status/1794609990566826369)
