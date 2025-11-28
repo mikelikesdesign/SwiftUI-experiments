@@ -135,6 +135,8 @@ Tap to generate pixel inspired animations, this example was made using mostly UI
 Tap and drag to adjust between different radial menu options
 [Demo](https://x.com/mikelikesdesign/status/1885702003428581696)
 
+https://github.com/user-attachments/assets/7a8c71e1-feb7-4982-850a-af4e840c6987
+
 ## pixel animation menu
 A pixel animation where you can adjust the animation settings in a menu
 [Demo](https://x.com/mikelikesdesign/status/1900764231605358723)
