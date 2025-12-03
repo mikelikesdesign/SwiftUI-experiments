@@ -184,4 +184,4 @@ Exploration into an AI globe visualization
 
 ## text alignment
 Inspired by Instagram's text alignment feature
-[Demo](https://x.com/okovalenkome/status/1996226294481060094)
+[Demo](https://x.com/mikelikesdesign/status/1996222220847501464)
