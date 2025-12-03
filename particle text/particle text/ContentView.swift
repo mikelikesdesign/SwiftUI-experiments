@@ -52,8 +52,10 @@ class LetterScene: SKScene {
             
             for i in 0..<count {
                 if let letter = CTFontCreatePathForGlyph(font, glyphs[i], nil) {
-                    var transform = CGAffineTransform(translationX: positions[i].x + xOffset,
-                                                    y: yOffset)
+                    let transform = CGAffineTransform(
+                        translationX: positions[i].x + xOffset,
+                        y: yOffset
+                    )
                     path.addPath(letter, transform: transform)
                 }
             }
