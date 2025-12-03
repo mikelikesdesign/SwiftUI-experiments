@@ -181,3 +181,7 @@ https://github.com/user-attachments/assets/7081ae2a-97d8-4327-bfa8-48e064767987
 ## AI globe
 Exploration into an AI globe visualization
 [Demo](https://x.com/mikelikesdesign/status/1984780016761344155)
+
+## text alignment
+Inspired by Instagram's text alignment feature
+[Demo](https://x.com/okovalenkome/status/1996226294481060094)
