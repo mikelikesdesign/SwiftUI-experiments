@@ -185,5 +185,6 @@ Exploration into an AI globe visualization
 ## text alignment
 Inspired by Instagram's text alignment feature
 [Demo](https://x.com/mikelikesdesign/status/1996222220847501464)
+![Text alignment demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/text%20alignment/text%20alignment.gif)
 
 https://github.com/user-attachments/assets/8e313a6a-9f00-42e7-bad7-72f308a71f1e
