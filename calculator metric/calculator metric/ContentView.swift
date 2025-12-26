@@ -12,7 +12,6 @@ struct ContentView: View {
     @State private var hasInputChanged: Bool = false
     @State private var isReversed: Bool = false
     
-    // Conversion constants
     let kgPerPound = 0.45359237
     let mPerFoot   = 0.3048
     let cmPerInch  = 2.54
@@ -104,7 +103,7 @@ struct ContentView: View {
                     ForEach(conversions, id: \.label) { conversion in
                         ConversionView(label: conversion.label, output: formattedNumber(number: conversion.value), hasInputChanged: $hasInputChanged)
                             .onLongPressGesture {
-                                self.isReversed.toggle() // toggles the conversions on long press
+                                self.isReversed.toggle() 
                             }
                     }
                 }
