@@ -95,7 +95,7 @@ struct ContentView: View {
             })
                 .font(.largeTitle)
                 .foregroundColor(.primary)
-                .keyboardType(.numberPad)
+                .keyboardType(.decimalPad)
                 .padding()
                 .cornerRadius(10)
             
