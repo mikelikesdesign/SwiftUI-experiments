@@ -188,3 +188,7 @@ Inspired by Instagram's text alignment feature
 ![Text alignment demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/text%20alignment/text%20alignment.gif)
 
 https://github.com/user-attachments/assets/8e313a6a-9f00-42e7-bad7-72f308a71f1e
+
+## dot pattern
+Tap to create a dot pattern
+[Demo](https://x.com/mikelikesdesign/status/2013309408470606202)
