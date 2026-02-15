@@ -192,3 +192,7 @@ https://github.com/user-attachments/assets/8e313a6a-9f00-42e7-bad7-72f308a71f1e
 ## dot pattern
 Tap to create a dot pattern
 [Demo](https://x.com/mikelikesdesign/status/2013309408470606202)
+
+## adaptive text
+An adaptive experiment where the text size adjusts based on how close your face is to the phone
+[Demo](https://x.com/mikelikesdesign/status/2021432016546435397)
