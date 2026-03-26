@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let paragraphs: [String] = [
+    private static let articleParagraphs: [String] = [
         "Prototyping is an essential part of the design process that offers numerous benefits. It allows designers to quickly and efficiently test their ideas, gather feedback, and make improvements before investing significant time and resources into the final product. By creating a tangible representation of the concept, prototyping enables designers to communicate their vision more effectively to stakeholders and collaborators.",
         "One of the key advantages of prototyping is that it facilitates iterative design. Through prototyping, designers can experiment with different layouts, interactions, and user flows, and identify potential usability issues early on. This iterative approach helps refine the design, ensuring that the final product meets user needs and expectations. Prototyping also allows for user testing and validation, providing valuable insights into how users interact with the product and highlighting areas for improvement.",
         "Prototyping is a powerful tool for collaboration and communication. It serves as a common language between designers, developers, and other team members, making it easier to align everyone's understanding of the product. By sharing prototypes with stakeholders, designers can gather valuable feedback, address concerns, and ensure that the product aligns with business goals and user requirements. Prototyping also facilitates effective communication with clients, enabling them to visualize the product and provide input throughout the design process.",
@@ -18,74 +18,145 @@ struct ContentView: View {
         "Prototyping also enables designers to communicate their ideas more effectively to development teams. By providing a tangible representation of the design, prototypes help bridge the gap between design and development. Developers can use prototypes as a reference to understand the desired functionality, interactions, and visual elements of the product. This collaboration between designers and developers streamlines the development process and reduces the chances of misinterpretation or miscommunication.",
         "In summary, prototyping is a valuable tool that offers numerous benefits throughout the design process. It facilitates iterative design, enables collaboration and communication, saves time and resources, fosters creativity, and ensures user-centered design. By embracing prototyping, designers can create better products that meet user needs and drive business success. As the field of design continues to evolve, prototyping remains an essential skill for designers to master and leverage in their work."
     ]
-    
-    @State private var scrollPercentage: Double = 0.0
-    @State private var showParticles: Bool = false
-    
+
+    private enum Layout {
+        static let paragraphSpacing: CGFloat = 20
+        static let horizontalPadding: CGFloat = 16
+        static let bottomSpacerHeight: CGFloat = 80
+        static let progressBarHeight: CGFloat = 3
+        static let statusVerticalPadding: CGFloat = 16
+        static let statusBottomPadding: CGFloat = 12
+        static let progressGradient: [Color] = [
+            Color(red: 0.4, green: 0.6, blue: 1),
+            Color(red: 0.2, green: 0.8, blue: 1)
+        ]
+    }
+
+    private enum Celebration {
+        static let completionThreshold = 100.0
+        static let emissionDuration = 2.2
+        static let fadeDuration = 1.2
+    }
+
+    @State private var scrollPercentage = 0.0
+    @State private var particleOverlay = ParticleOverlayState.hidden
+    @State private var celebrationTask: Task<Void, Never>?
+
     var body: some View {
         ZStack(alignment: .bottom) {
-            ScrollViewWrapper(scrollPercentage: $scrollPercentage) {
-                VStack(alignment: .leading, spacing: 20) {
-                    ForEach(paragraphs, id: \.self) { paragraph in
-                        Text(paragraph)
-                            .font(.body)
-                            .multilineTextAlignment(.leading)
-                            .padding(.horizontal, 16)
-                    }
-                    
-                    Spacer(minLength: 80)
-                }
-                .background(Color.white)
-                .foregroundColor(.black)
-            }
-            
-            VStack(spacing: 0) {
-                GeometryReader { geometry in
-                    LinearGradient(gradient: Gradient(colors: [Color(red: 0.4, green: 0.6, blue: 1), Color(red: 0.2, green: 0.8, blue: 1)]), startPoint: .leading, endPoint: .trailing)
-                        .frame(height: 3)
-                        .frame(width: scrollPercentage / 100 * geometry.size.width)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .frame(height: 3)
-                
-                HStack {
-                    Text(scrollStatusText())
-                        .font(.subheadline)
-                        .foregroundColor(.white)
-                    
-                    Spacer()
-                    
-                    Text("\(max(0, Int(scrollPercentage)))%")
-                        .font(.subheadline)
-                        .foregroundColor(.white)
-                }
-                .padding(.horizontal)
-                .padding(.vertical, 16)
-                .padding(.bottom, 12)
-            }
-            .background(Color.black)
-            
-            if showParticles {
-                ParticleView()
-                    .edgesIgnoringSafeArea(.all)
+            articleView
+            progressFooter
+
+            if particleOverlay.isVisible {
+                ParticleView(isEmitting: particleOverlay.isEmitting)
+                    .opacity(particleOverlay.opacity)
+                    .allowsHitTesting(false)
+                    .ignoresSafeArea()
             }
         }
-        .edgesIgnoringSafeArea(.bottom)
-        .onChange(of: scrollPercentage) { value in
-            if value >= 100 && !showParticles {
-                showParticles = true
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                    withAnimation {
-                        showParticles = false
-                    }
-                }
+        .ignoresSafeArea(edges: .bottom)
+        .onChange(of: scrollPercentage) { _, newValue in
+            guard newValue >= Celebration.completionThreshold, !particleOverlay.isVisible else {
+                return
             }
+
+            startCelebration()
+        }
+        .onDisappear {
+            celebrationTask?.cancel()
+            celebrationTask = nil
+            particleOverlay = .hidden
         }
     }
-    
-    private func scrollStatusText() -> String {
-        switch scrollPercentage {
+
+    private var articleView: some View {
+        ScrollViewWrapper(scrollPercentage: $scrollPercentage) {
+            VStack(alignment: .leading, spacing: Layout.paragraphSpacing) {
+                ForEach(Array(Self.articleParagraphs.enumerated()), id: \.offset) { _, paragraph in
+                    Text(paragraph)
+                        .font(.body)
+                        .multilineTextAlignment(.leading)
+                        .padding(.horizontal, Layout.horizontalPadding)
+                }
+
+                Spacer(minLength: Layout.bottomSpacerHeight)
+            }
+            .background(Color.white)
+            .foregroundColor(.black)
+        }
+    }
+
+    private var progressFooter: some View {
+        VStack(spacing: 0) {
+            progressBar
+            progressStatus
+        }
+        .background(Color.black)
+    }
+
+    private var progressBar: some View {
+        GeometryReader { geometry in
+            LinearGradient(
+                colors: Layout.progressGradient,
+                startPoint: .leading,
+                endPoint: .trailing
+            )
+            .frame(height: Layout.progressBarHeight)
+            .frame(width: clampedScrollPercentage / 100 * geometry.size.width)
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .frame(height: Layout.progressBarHeight)
+    }
+
+    private var progressStatus: some View {
+        HStack {
+            Text(scrollStatusText(for: clampedScrollPercentage))
+                .font(.subheadline)
+                .foregroundColor(.white)
+
+            Spacer()
+
+            Text("\(Int(clampedScrollPercentage))%")
+                .font(.subheadline)
+                .foregroundColor(.white)
+        }
+        .padding(.horizontal)
+        .padding(.vertical, Layout.statusVerticalPadding)
+        .padding(.bottom, Layout.statusBottomPadding)
+    }
+
+    private var clampedScrollPercentage: Double {
+        scrollPercentage.clamped(to: 0...100)
+    }
+
+    private func startCelebration() {
+        celebrationTask?.cancel()
+        particleOverlay = .active
+
+        celebrationTask = Task { @MainActor in
+            try? await Task.sleep(for: .seconds(Celebration.emissionDuration))
+            guard !Task.isCancelled else {
+                return
+            }
+
+            particleOverlay.isEmitting = false
+
+            withAnimation(.easeOut(duration: Celebration.fadeDuration)) {
+                particleOverlay.opacity = 0
+            }
+
+            try? await Task.sleep(for: .seconds(Celebration.fadeDuration))
+            guard !Task.isCancelled else {
+                return
+            }
+
+            particleOverlay = .hidden
+            celebrationTask = nil
+        }
+    }
+
+    private func scrollStatusText(for progress: Double) -> String {
+        switch progress {
         case ...0:
             return "Enjoy the post"
         case 1..<25:
@@ -102,103 +173,167 @@ struct ContentView: View {
     }
 }
 
+private struct ParticleOverlayState {
+    var isVisible = false
+    var isEmitting = false
+    var opacity = 1.0
+
+    static let hidden = Self()
+    static let active = Self(isVisible: true, isEmitting: true, opacity: 1.0)
+}
+
 struct ParticleView: UIViewRepresentable {
+    private enum Configuration {
+        static let emitterSize = CGSize(width: 100, height: 100)
+        static let particleImageSize = CGSize(width: 50, height: 50)
+        static let particleFontSize: CGFloat = 50
+        static let birthRate: Float = 30
+        static let lifetime: Float = 3
+        static let velocity: CGFloat = 200
+        static let velocityRange: CGFloat = 50
+        static let scale: CGFloat = 0.1
+        static let scaleRange: CGFloat = 0.2
+        static let emoji = "👏"
+    }
+
+    var isEmitting: Bool
+
     func makeUIView(context: Context) -> UIView {
         let view = UIView(frame: UIScreen.main.bounds)
-        
-        let emitter = CAEmitterLayer()
-        emitter.emitterPosition = CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
-        emitter.emitterShape = .circle
-        emitter.emitterSize = CGSize(width: 100, height: 100)
-        
-        let cell = CAEmitterCell()
-        cell.birthRate = 30
-        cell.lifetime = 3
-        cell.velocity = 200
-        cell.velocityRange = 50
-        cell.emissionRange = .pi * 2
-        cell.scale = 0.1
-        cell.scaleRange = 0.2
-        cell.contents = getEmojiImage(emoji: "👏")
-        
-        emitter.emitterCells = [cell]
-        
+        view.backgroundColor = .clear
+        view.isUserInteractionEnabled = false
+
+        let emitter = context.coordinator.emitter
+        emitter.emitterCells = [makeEmitterCell()]
+        updateEmitterLayout(emitter, in: view.bounds)
+        emitter.birthRate = isEmitting ? 1 : 0
+
         view.layer.addSublayer(emitter)
-        
         return view
     }
-    
-    func updateUIView(_ uiView: UIView, context: Context) {}
-    
-    private func getEmojiImage(emoji: String) -> CGImage? {
-        let size = CGSize(width: 50, height: 50) // Increase the size by 25%
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        
-        let rect = CGRect(origin: .zero, size: size)
-        (emoji as NSString).draw(in: rect, withAttributes: [
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 50) // Increase the font size by 25%
-        ])
-        
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return image?.cgImage
+
+    func updateUIView(_ uiView: UIView, context: Context) {
+        let emitter = context.coordinator.emitter
+        updateEmitterLayout(emitter, in: uiView.bounds)
+        emitter.birthRate = isEmitting ? 1 : 0
+    }
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator()
+    }
+
+    private func updateEmitterLayout(_ emitter: CAEmitterLayer, in bounds: CGRect) {
+        let referenceBounds = bounds.isEmpty ? UIScreen.main.bounds : bounds
+        emitter.emitterPosition = CGPoint(x: referenceBounds.midX, y: referenceBounds.midY)
+        emitter.emitterShape = .circle
+        emitter.emitterSize = Configuration.emitterSize
+    }
+
+    private func makeEmitterCell() -> CAEmitterCell {
+        let cell = CAEmitterCell()
+        cell.birthRate = Configuration.birthRate
+        cell.lifetime = Configuration.lifetime
+        cell.velocity = Configuration.velocity
+        cell.velocityRange = Configuration.velocityRange
+        cell.emissionRange = .pi * 2
+        cell.scale = Configuration.scale
+        cell.scaleRange = Configuration.scaleRange
+        cell.contents = makeEmojiImage(emoji: Configuration.emoji)
+        return cell
+    }
+
+    private func makeEmojiImage(emoji: String) -> CGImage? {
+        UIGraphicsBeginImageContextWithOptions(Configuration.particleImageSize, false, 0)
+        defer { UIGraphicsEndImageContext() }
+
+        let rect = CGRect(origin: .zero, size: Configuration.particleImageSize)
+        (emoji as NSString).draw(
+            in: rect,
+            withAttributes: [
+                .font: UIFont.systemFont(ofSize: Configuration.particleFontSize)
+            ]
+        )
+
+        return UIGraphicsGetImageFromCurrentImageContext()?.cgImage
+    }
+
+    final class Coordinator {
+        let emitter = CAEmitterLayer()
     }
 }
 
 struct ScrollViewWrapper<Content: View>: UIViewRepresentable {
     @Binding var scrollPercentage: Double
-    var content: () -> Content
-    
+    private let content: Content
+
+    init(scrollPercentage: Binding<Double>, @ViewBuilder content: () -> Content) {
+        _scrollPercentage = scrollPercentage
+        self.content = content()
+    }
+
     func makeUIView(context: Context) -> UIScrollView {
         let scrollView = UIScrollView()
         scrollView.delegate = context.coordinator
-        
-        let hostingController = UIHostingController(rootView: content())
-        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
-        
-        scrollView.addSubview(hostingController.view)
-        
-        NSLayoutConstraint.activate([
-            hostingController.view.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            hostingController.view.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            hostingController.view.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            hostingController.view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            hostingController.view.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
-        ])
-        
+
+        let hostedView = context.coordinator.hostingController.view
+        hostedView?.translatesAutoresizingMaskIntoConstraints = false
+        hostedView?.backgroundColor = .clear
+
+        if let hostedView {
+            scrollView.addSubview(hostedView)
+
+            NSLayoutConstraint.activate([
+                hostedView.leadingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.leadingAnchor),
+                hostedView.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor),
+                hostedView.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor),
+                hostedView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
+                hostedView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor)
+            ])
+        }
+
         return scrollView
     }
-    
+
     func updateUIView(_ uiView: UIScrollView, context: Context) {
-        // No-op
+        context.coordinator.scrollPercentage = $scrollPercentage
+        context.coordinator.hostingController.rootView = content
     }
-    
+
     func makeCoordinator() -> Coordinator {
-        Coordinator(self)
+        Coordinator(scrollPercentage: $scrollPercentage, content: content)
     }
-    
-    class Coordinator: NSObject, UIScrollViewDelegate {
-        var parent: ScrollViewWrapper
-        
-        init(_ parent: ScrollViewWrapper) {
-            self.parent = parent
+
+    final class Coordinator: NSObject, UIScrollViewDelegate {
+        var scrollPercentage: Binding<Double>
+        let hostingController: UIHostingController<Content>
+
+        init(scrollPercentage: Binding<Double>, content: Content) {
+            self.scrollPercentage = scrollPercentage
+            self.hostingController = UIHostingController(rootView: content)
         }
-        
+
         func scrollViewDidScroll(_ scrollView: UIScrollView) {
-            let contentHeight = scrollView.contentSize.height
-            let scrollOffset = scrollView.contentOffset.y
-            let visibleHeight = scrollView.frame.height
-            
-            guard contentHeight > visibleHeight else {
-                parent.scrollPercentage = 0
-                return
-            }
-            
-            let scrollableHeight = contentHeight - visibleHeight
-            let scrollProgress = scrollOffset / scrollableHeight
-            parent.scrollPercentage = min(scrollProgress * 100, 100)
+            scrollPercentage.wrappedValue = scrollProgress(for: scrollView)
         }
+
+        private func scrollProgress(for scrollView: UIScrollView) -> Double {
+            let contentHeight = scrollView.contentSize.height
+            let visibleHeight = scrollView.bounds.height
+
+            guard contentHeight > visibleHeight else {
+                return 0
+            }
+
+            let scrollableHeight = contentHeight - visibleHeight
+            let scrollProgress = (scrollView.contentOffset.y / scrollableHeight).clamped(to: 0...1)
+            return scrollProgress * 100
+        }
+    }
+}
+
+private extension Comparable {
+    func clamped(to limits: ClosedRange<Self>) -> Self {
+        min(max(self, limits.lowerBound), limits.upperBound)
     }
 }
 

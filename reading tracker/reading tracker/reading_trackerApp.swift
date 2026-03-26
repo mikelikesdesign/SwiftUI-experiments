@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct reading_trackerApp: App {
+struct ReadingTrackerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
