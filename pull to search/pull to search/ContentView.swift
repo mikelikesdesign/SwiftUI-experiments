@@ -7,110 +7,161 @@
 
 import SwiftUI
 
+private let articleParagraphs = [
+    "Prototyping is an important step in the design process that offers numerous benefits. It allows designers to iterate quickly, gather user feedback, test and validate ideas cost-effectively, facilitate communication and collaboration among team members, and mitigate risks by identifying potential issues early on. By creating prototypes, designers can make informed decisions and improve the overall quality of the final product.",
+    "Moreover, prototyping helps in exploring and refining user experiences. It enables designers to experiment with different layouts, interactions, and visual designs, ensuring that the product meets user expectations and provides a seamless experience. Prototyping also serves as a valuable tool for presenting ideas to stakeholders and getting their buy-in, as it provides a tangible representation of the product's vision.",
+    "Prototyping also plays a crucial role in saving time and resources in the long run. By identifying and addressing usability issues, design flaws, and technical challenges early in the development process, prototyping helps avoid costly mistakes and rework later on. It allows teams to validate assumptions, gather valuable insights, and make data-driven decisions before investing heavily in the final product."
+]
+
 struct ContentView: View {
+    private let maxOffset: CGFloat = 120
+    private let pullMultiplier: CGFloat = 1.2
+    private let pullIndicatorYOffset: CGFloat = 32
+    private let searchAnimation: Animation = .easeInOut
+
     @State private var offset: CGFloat = 0
     @State private var showSearchField = false
-    @State private var searchText: String = ""
-    private let maxOffset: CGFloat = 120 // Threshold for maximum pull (decreased by 20%)
+    @State private var searchText = ""
+    @FocusState private var isSearchFieldFocused: Bool
 
     var body: some View {
         ZStack(alignment: .top) {
-            VStack(alignment: .leading, spacing: 8) {
-                Text("The Benefits of Prototyping")
-                    .font(.system(size: 24, weight: .bold)) // Decrease header font size by 4 points
-                    .foregroundColor(Color(hex: 0x464646)) // Set header color to #464646
-                    .padding(.horizontal)
-                    .padding(.bottom, 8) // Adjust spacing between header and first paragraph
-                    .padding(.top, 24) // Push down the header by 24 pixels
-                
-                Text("Prototyping is an important step in the design process that offers numerous benefits. It allows designers to iterate quickly, gather user feedback, test and validate ideas cost-effectively, facilitate communication and collaboration among team members, and mitigate risks by identifying potential issues early on. By creating prototypes, designers can make informed decisions and improve the overall quality of the final product.")
-                    .font(.system(size: 14)) // Decrease font size by 2 points
-                    .foregroundColor(Color(hex: 0x8A8A8A)) // Set body text color to #8A8A8A
-                    .lineSpacing(6) // Increase line spacing
-                    .padding(.horizontal)
-                    .padding(.bottom, 8) // Add bottom padding to create spacing between paragraphs
-                
-                Text("Moreover, prototyping helps in exploring and refining user experiences. It enables designers to experiment with different layouts, interactions, and visual designs, ensuring that the product meets user expectations and provides a seamless experience. Prototyping also serves as a valuable tool for presenting ideas to stakeholders and getting their buy-in, as it provides a tangible representation of the product's vision.")
-                    .font(.system(size: 14)) // Decrease font size by 2 points
-                    .foregroundColor(Color(hex: 0x8A8A8A)) // Set body text color to #8A8A8A
-                    .lineSpacing(6) // Increase line spacing
-                    .padding(.horizontal)
-                    .padding(.bottom, 8) // Add bottom padding to create spacing between paragraphs
-                
-                Text("Prototyping also plays a crucial role in saving time and resources in the long run. By identifying and addressing usability issues, design flaws, and technical challenges early in the development process, prototyping helps avoid costly mistakes and rework later on. It allows teams to validate assumptions, gather valuable insights, and make data-driven decisions before investing heavily in the final product.")
-                    .font(.system(size: 14)) // Decrease font size by 2 points
-                    .foregroundColor(Color(hex: 0x8A8A8A)) // Set body text color to #8A8A8A
-                    .lineSpacing(6) // Increase line spacing
-                    .padding(.horizontal)
-                    .padding(.bottom) // Add bottom padding
-                
-                Spacer() // Add a Spacer to push the content to the top
-            }
-            .background(Color.white)
-            .offset(y: showSearchField ? 0 : offset)
-            .animation(.easeInOut, value: offset)
-            .zIndex(1)
-            
+            ArticleContent()
+                .background(Color.white)
+                .offset(y: showSearchField ? 0 : offset)
+                .animation(searchAnimation, value: offset)
+                .zIndex(1)
+
             if !showSearchField {
-                PullToSearch(offset: $offset, showSearchField: $showSearchField)
-                    .offset(y: max(0, offset - 32)) // Adjust this value to position the circle above the header (decreased by 20%)
-                    .zIndex(2)
+                PullToSearch(
+                    offset: $offset,
+                    showSearchField: $showSearchField,
+                    triggerOffset: maxOffset
+                )
+                .offset(y: max(0, offset - pullIndicatorYOffset))
+                .zIndex(2)
             }
 
             if showSearchField {
-                Color.black.opacity(0.5)
-                    .edgesIgnoringSafeArea(.all)
-                    .onTapGesture {
-                        withAnimation {
-                            self.showSearchField = false
-                            self.searchText = ""
-                            UIApplication.shared.endEditing() // Dismiss the keyboard
-                        }
-                    }
+                searchOverlay
                     .zIndex(3)
-
-                VStack {
-                    TextField("Search...", text: $searchText)
-                        .textFieldStyle(PlainTextFieldStyle())
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(100)
-                        .shadow(radius: 10)
-                        .padding(.horizontal, 20)
-                        .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                UIApplication.shared.showKeyboard() // Show the keyboard
-                            }
-                        }
-                }
-                .padding(.top, 60)
-                .transition(.move(edge: .top))
-                .animation(.easeInOut)
-                .zIndex(4)
             }
         }
-        .background(Color.white.edgesIgnoringSafeArea(.all))
-        .gesture(DragGesture()
-            .onChanged { value in
-                if value.translation.height > 0 && !self.showSearchField {
-                    self.offset = min(value.translation.height * 1.2, maxOffset) // Increase the speed by 20%
+        .background(Color.white.ignoresSafeArea())
+        .ignoresSafeArea(.keyboard)
+        .gesture(
+            DragGesture()
+                .onChanged(handlePullChanged)
+                .onEnded { _ in
+                    handlePullEnded()
                 }
-            }
-            .onEnded { value in
-                if self.offset == maxOffset {
-                    withAnimation {
-                        self.showSearchField = true
-                    }
-                    withAnimation {
-                        self.offset = 0
-                    }
-                } else {
-                    withAnimation {
-                        self.offset = 0
-                    }
-                }
-            }
         )
+        .onChange(of: showSearchField) { _, isShowing in
+            guard isShowing else {
+                return
+            }
+
+            isSearchFieldFocused = true
+        }
+    }
+
+    private var searchOverlay: some View {
+        ZStack(alignment: .top) {
+            Color.black.opacity(0.5)
+                .ignoresSafeArea()
+                .onTapGesture(perform: hideSearch)
+
+            SearchField(text: $searchText, isFocused: $isSearchFieldFocused)
+                .padding(.top, 60)
+                .transition(.move(edge: .top).combined(with: .opacity))
+        }
+    }
+
+    private func handlePullChanged(_ value: DragGesture.Value) {
+        guard value.translation.height > 0, !showSearchField else {
+            return
+        }
+
+        offset = min(value.translation.height * pullMultiplier, maxOffset)
+    }
+
+    private func handlePullEnded() {
+        let shouldShowSearch = offset >= maxOffset
+
+        withAnimation(searchAnimation) {
+            offset = 0
+
+            if shouldShowSearch {
+                showSearchField = true
+            }
+        }
+    }
+
+    private func hideSearch() {
+        isSearchFieldFocused = false
+        searchText = ""
+
+        withAnimation(searchAnimation) {
+            showSearchField = false
+        }
+    }
+}
+
+private struct ArticleContent: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("The Benefits of Prototyping")
+                .font(.system(size: 24, weight: .bold))
+                .foregroundColor(Color(hex: 0x464646))
+                .padding(.horizontal)
+                .padding(.top, 24)
+                .padding(.bottom, 8)
+
+            ForEach(articleParagraphs, id: \.self) { paragraph in
+                ArticleParagraph(text: paragraph)
+            }
+
+            Spacer()
+        }
+    }
+}
+
+private struct ArticleParagraph: View {
+    let text: String
+
+    var body: some View {
+        Text(text)
+            .font(.system(size: 14))
+            .foregroundColor(Color(hex: 0x8A8A8A))
+            .lineSpacing(6)
+            .padding(.horizontal)
+            .padding(.bottom, 8)
+    }
+}
+
+private struct SearchField: View {
+    @Binding var text: String
+    var isFocused: FocusState<Bool>.Binding
+
+    private let fieldBackground = Color(uiColor: .secondarySystemBackground)
+    private let fieldForeground = Color(uiColor: .label)
+    private let fieldBorder = Color(uiColor: .separator)
+
+    var body: some View {
+        TextField("Search...", text: $text)
+            .textFieldStyle(.plain)
+            .foregroundStyle(fieldForeground)
+            .tint(fieldForeground)
+            .padding()
+            .background(fieldBackground)
+            .clipShape(Capsule())
+            .overlay {
+                Capsule()
+                    .stroke(fieldBorder.opacity(0.35), lineWidth: 1)
+            }
+            .shadow(radius: 10)
+            .padding(.horizontal, 20)
+            .focused(isFocused)
     }
 }
 
@@ -130,57 +181,38 @@ struct PullToSearch: View {
     @Binding var offset: CGFloat
     @Binding var showSearchField: Bool
 
+    let triggerOffset: CGFloat
+
     var body: some View {
         VStack {
             if offset > 0 {
                 Circle()
-                    .fill(offset > 80 ? Color.blue : Color.black) // Decrease the threshold to 80 (decreased by 20%)
-                    .frame(width: min(offset / 1.6, 50), height: min(offset / 1.6, 50)) // Increase the size faster (decreased by 20%)
-                    .overlay(
-                        Group {
-                            if offset > 40 { // Decrease the threshold to 40 (search icon appears earlier)
-                                Image(systemName: "magnifyingglass")
-                                    .foregroundColor(.white)
-                                    .scaleEffect(min(1, (offset - 40) / 40)) // Scale the search icon based on the offset
-                                    .animation(.easeInOut, value: offset)
-                            }
+                    .fill(offset > 80 ? Color.blue : Color.black)
+                    .frame(width: min(offset / 1.6, 50), height: min(offset / 1.6, 50))
+                    .overlay {
+                        if offset > 40 {
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(.white)
+                                .scaleEffect(min(1, (offset - 40) / 40))
+                                .animation(.easeInOut, value: offset)
                         }
-                    )
+                    }
                     .animation(.easeInOut, value: offset)
-                    .padding(.top, -24) // Adjust to position the circle from the top (decreased by 20%)
+                    .padding(.top, -24)
             }
+
             Spacer()
         }
         .frame(height: 0)
-        .onChange(of: offset) { _ in
-            if offset >= 120 { // Decrease the threshold to 120 (decreased by 20%)
-                withAnimation {
-                    showSearchField = true
-                }
+        .onChange(of: offset) { _, newOffset in
+            guard newOffset >= triggerOffset else {
+                return
+            }
+
+            withAnimation(.easeInOut) {
+                showSearchField = true
             }
         }
-    }
-}
-
-extension UIApplication {
-    func endEditing() {
-        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-
-    func showKeyboard() {
-        // A hack to show the keyboard
-        let keyWindow = UIApplication.shared.connectedScenes
-            .filter({ $0.activationState == .foregroundActive })
-            .map({ $0 as? UIWindowScene })
-            .compactMap({ $0 })
-            .first?.windows
-            .filter({ $0.isKeyWindow }).first
-
-        let textField = UITextField()
-        keyWindow?.addSubview(textField)
-        textField.becomeFirstResponder()
-        textField.resignFirstResponder()
-        textField.removeFromSuperview()
     }
 }
 
