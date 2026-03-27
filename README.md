@@ -71,10 +71,6 @@ Get inspiring messages as the reader continues reading
 A fun color picker
 [Demo](https://x.com/mikelikesdesign/status/1734069130213630021)
 
-## shiny text
-Example using, https://github.com/markiv/SwiftUI-Shimmer
-[Demo](https://x.com/mikelikesdesign/status/1797067265172750392)
-
 ## walk charts
 Animated walking charts based on walking data
 [Demo](https://x.com/mikelikesdesign/status/1829848663675547771)
