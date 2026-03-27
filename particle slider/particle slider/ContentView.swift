@@ -17,14 +17,13 @@ struct ContentView: View {
     let screenHeight = UIScreen.main.bounds.height
     let trackpadHeight: CGFloat = UIScreen.main.bounds.height * 0.4
     let knobSize: CGFloat = 40
-    let knobEnlargementFactor: CGFloat = 1.5 // Increased from 1.25 to 1.5 for 50% enlargement
+    let knobEnlargementFactor: CGFloat = 1.5
 
     let timer = Timer.publish(every: 0.016, on: .main, in: .common).autoconnect()
 
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
-                // Particle System
                 ZStack {
                     ForEach(particles) { particle in
                         Circle()
@@ -33,51 +32,15 @@ struct ContentView: View {
                             .position(particle.position)
                     }
                 }
-                .frame(width: geometry.size.width, height: geometry.size.height - trackpadHeight - 60) // Reduced height
+                .frame(width: geometry.size.width, height: geometry.size.height - trackpadHeight - 60)
                 .onReceive(timer) { _ in
                     updateParticles(size: CGSize(width: geometry.size.width, height: geometry.size.height - trackpadHeight - 60))
                 }
                 
-                Spacer(minLength: 20) // Add some space between particles and track pad
+                Spacer(minLength: 20)
                 
-                // Track pad
                 ZStack {
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(Color(hex: "121212")) // Changed from Color.white to #121212
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(Color(hex: "F1F1F1"), lineWidth: 1)
-                        )
-                        .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 0)
-                        .rotation3DEffect(
-                            .degrees(trackpadRotation.x),
-                            axis: (x: 1, y: 0, z: 0)
-                        )
-                        .rotation3DEffect(
-                            .degrees(trackpadRotation.y),
-                            axis: (x: 0, y: 1, z: 0)
-                        )
-                    
-                    // Labels
-                    VStack {
-                        Text("Faster")
-                            .padding(.top, 8)
-                            .foregroundColor(.gray.opacity(0.8)) // Changed from 0.6 to 0.8
-                        Spacer()
-                        Text("Slower")
-                            .padding(.bottom, 8)
-                            .foregroundColor(.gray.opacity(0.8)) // Changed from 0.6 to 0.8
-                    }
-                    
-                    HStack {
-                        RotatedText(text: "Gather", angle: -90)
-                            .padding(.leading, 8)
-                            .foregroundColor(.gray.opacity(0.8)) // Changed from 0.6 to 0.8
-                        Spacer()
-                        RotatedText(text: "Disperse", angle: 90)
-                            .padding(.trailing, 8)
-                            .foregroundColor(.gray.opacity(0.8)) // Changed from 0.6 to 0.8
-                    }
+                    trackpadSurface
                     
                     Circle()
                         .fill(Color.white)
@@ -104,9 +67,9 @@ struct ContentView: View {
                 }
                 .frame(height: trackpadHeight)
                 .padding(.horizontal, 16)
-                .padding(.bottom, 24) // Changed from 32 to 24
+                .padding(.bottom, 24)
                 
-                Spacer(minLength: 0) // This will push the track pad up
+                Spacer(minLength: 0)
             }
         }
         .edgesIgnoringSafeArea(.all)
@@ -119,8 +82,8 @@ struct ContentView: View {
     
     private func updateParticles(size: CGSize) {
         let normalizedPosition = normalizedPosition(for: UIScreen.main.bounds.size)
-        let speed = (1 - normalizedPosition.y) * 5 // Reduced max speed
-        let dispersion = normalizedPosition.x * 2 // Reduced max dispersion
+        let speed = (1 - normalizedPosition.y) * 5
+        let dispersion = normalizedPosition.x * 2
         
         for i in particles.indices {
             particles[i].update(speed: speed, dispersion: dispersion, bounds: size)
@@ -137,12 +100,11 @@ struct ContentView: View {
             height: newPosition.y - limitedPosition.y
         )
         
-        // Update trackpad rotation based on knob position
-        let maxRotation: CGFloat = 5 // Increased from 3 to 5 degrees
-        let normalizedX = (sliderPosition.x / size.width) * 2 - 1 // Range: -1 to 1
-        let normalizedY = (sliderPosition.y / trackpadHeight) * 2 - 1 // Range: -1 to 1
+        let maxRotation: CGFloat = 5
+        let normalizedX = (sliderPosition.x / size.width) * 2 - 1
+        let normalizedY = (sliderPosition.y / trackpadHeight) * 2 - 1
         trackpadRotation.y = normalizedX * maxRotation
-        trackpadRotation.x = -normalizedY * maxRotation // Negative to tilt up when dragging down
+        trackpadRotation.x = -normalizedY * maxRotation
     }
     
     private func limitPositionToTrackpad(_ position: CGPoint, in size: CGSize) -> CGPoint {
@@ -158,6 +120,50 @@ struct ContentView: View {
             y: sliderPosition.y / trackpadHeight
         )
     }
+
+    private var trackpadSurface: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color(hex: "121212"))
+                .overlay {
+                    TrackpadGrid()
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                }
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color(hex: "F1F1F1"), lineWidth: 1)
+                )
+                .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 0)
+
+            VStack {
+                Text("Faster")
+                    .padding(.top, 8)
+                    .foregroundColor(.gray.opacity(0.8))
+                Spacer()
+                Text("Slower")
+                    .padding(.bottom, 8)
+                    .foregroundColor(.gray.opacity(0.8))
+            }
+
+            HStack {
+                RotatedText(text: "Gather", angle: -90)
+                    .padding(.leading, 8)
+                    .foregroundColor(.gray.opacity(0.8))
+                Spacer()
+                RotatedText(text: "Disperse", angle: 90)
+                    .padding(.trailing, 8)
+                    .foregroundColor(.gray.opacity(0.8))
+            }
+        }
+        .rotation3DEffect(
+            .degrees(trackpadRotation.x),
+            axis: (x: 1, y: 0, z: 0)
+        )
+        .rotation3DEffect(
+            .degrees(trackpadRotation.y),
+            axis: (x: 0, y: 1, z: 0)
+        )
+    }
 }
 
 struct Particle: Identifiable {
@@ -171,7 +177,7 @@ struct Particle: Identifiable {
         position = CGPoint(x: CGFloat.random(in: 0...bounds.width), y: CGFloat.random(in: 0...bounds.height))
         velocity = CGVector(dx: CGFloat.random(in: -1...1), dy: CGFloat.random(in: -1...1))
         color = Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1))
-        size = CGFloat.random(in: 3...7) // Increased size range
+        size = CGFloat.random(in: 3...7)
     }
     
     mutating func update(speed: CGFloat, dispersion: CGFloat, bounds: CGSize) {
@@ -179,24 +185,19 @@ struct Particle: Identifiable {
         let directionFromCenter = CGVector(dx: position.x - center.x, dy: position.y - center.y)
         let distanceFromCenter = sqrt(directionFromCenter.dx * directionFromCenter.dx + directionFromCenter.dy * directionFromCenter.dy)
         
-        // Apply dispersion or attraction
-        let factor = dispersion - 1 // Now ranges from -1 (full gather) to 1 (full disperse)
+        let factor = dispersion - 1
         velocity.dx += directionFromCenter.dx / distanceFromCenter * factor
         velocity.dy += directionFromCenter.dy / distanceFromCenter * factor
         
-        // Apply speed
         position.x += velocity.dx * speed
         position.y += velocity.dy * speed
         
-        // Wrap around edges instead of bouncing
         position.x = (position.x + bounds.width).truncatingRemainder(dividingBy: bounds.width)
         position.y = (position.y + bounds.height).truncatingRemainder(dividingBy: bounds.height)
         
-        // Add some randomness to prevent particles from settling
         velocity.dx += CGFloat.random(in: -0.1...0.1)
         velocity.dy += CGFloat.random(in: -0.1...0.1)
         
-        // Limit velocity to prevent extreme speeds
         let maxVelocity: CGFloat = 5
         let currentVelocity = sqrt(velocity.dx * velocity.dx + velocity.dy * velocity.dy)
         if currentVelocity > maxVelocity {
@@ -218,6 +219,65 @@ struct RotatedText: View {
     }
 }
 
+struct TrackpadGrid: View {
+    private let spacing: CGFloat = 28
+    private let majorLineEvery = 4
+    private let lineColor = Color.white.opacity(0.06)
+
+    var body: some View {
+        Canvas { context, size in
+            var minorLines = Path()
+            var majorLines = Path()
+
+            for (index, x) in stride(from: spacing, to: size.width, by: spacing).enumerated() {
+                if index.isMultiple(of: majorLineEvery) {
+                    majorLines.move(to: CGPoint(x: x, y: 0))
+                    majorLines.addLine(to: CGPoint(x: x, y: size.height))
+                } else {
+                    minorLines.move(to: CGPoint(x: x, y: 0))
+                    minorLines.addLine(to: CGPoint(x: x, y: size.height))
+                }
+            }
+
+            for (index, y) in stride(from: spacing, to: size.height, by: spacing).enumerated() {
+                if index.isMultiple(of: majorLineEvery) {
+                    majorLines.move(to: CGPoint(x: 0, y: y))
+                    majorLines.addLine(to: CGPoint(x: size.width, y: y))
+                } else {
+                    minorLines.move(to: CGPoint(x: 0, y: y))
+                    minorLines.addLine(to: CGPoint(x: size.width, y: y))
+                }
+            }
+
+            context.stroke(
+                minorLines,
+                with: .color(lineColor),
+                lineWidth: 0.5
+            )
+            context.stroke(
+                majorLines,
+                with: .color(lineColor),
+                lineWidth: 0.75
+            )
+        }
+        .overlay {
+            Rectangle()
+                .fill(
+                    LinearGradient(
+                        colors: [
+                            .white.opacity(0.02),
+                            .clear,
+                            .black.opacity(0.08)
+                        ],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
+        }
+        .allowsHitTesting(false)
+    }
+}
+
 extension Color {
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
@@ -225,11 +285,11 @@ extension Color {
         Scanner(string: hex).scanHexInt64(&int)
         let a, r, g, b: UInt64
         switch hex.count {
-        case 3: // RGB (12-bit)
+        case 3:
             (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-        case 6: // RGB (24-bit)
+        case 6:
             (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-        case 8: // ARGB (32-bit)
+        case 8:
             (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
         default:
             (a, r, g, b) = (1, 1, 1, 0)
@@ -248,4 +308,3 @@ extension Color {
 #Preview {
     ContentView()
 }
-
