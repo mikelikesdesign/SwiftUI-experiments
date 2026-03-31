@@ -1,3 +1,36 @@
-**/.DS_Store
+# macOS
 .DS_Store
+
+# Xcode user-specific data
 *.xcuserstate
+xcuserdata/
+*.xcbkptlist
+*.xccheckout
+*.xcscmblueprint
+
+# Build artifacts
+DerivedData/
+.build/
+build/
+*.dSYM
+*.dSYM.zip
+*.ipa
+
+# Local environment and secret material
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+GoogleService-Info.plist
+Secrets*.plist
+Secrets*.xcconfig
+*.xcconfig.local
+*.local.xcconfig
+*.pem
+*.key
+*.p8
+*.p12
+*.cer
+*.crt
+*.mobileprovision
