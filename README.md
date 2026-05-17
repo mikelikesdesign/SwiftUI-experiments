@@ -196,3 +196,7 @@ An adaptive experiment where the text size adjusts based on how close your face 
 ## reading light
 An interactive reading experience where you can adjust the light source
 [Demo](https://x.com/mikelikesdesign/status/2045658087487623290)
+
+## swipe interaction
+A 3D cube style swipe interaction inspired by Instagram's story feature
+[Demo](https://x.com/mikelikesdesign/status/1998347143484989790?s=20)
