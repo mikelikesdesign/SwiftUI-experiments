@@ -200,3 +200,7 @@ An interactive reading experience where you can adjust the light source
 ## swipe interaction
 A 3D cube style swipe interaction inspired by Instagram's story feature
 [Demo](https://x.com/mikelikesdesign/status/1998347143484989790?s=20)
+
+## drag delete
+A prototype that lets you scrub the delete key to preview and remove text
+[Demo](https://x.com/mikelikesdesign/status/2054021182824092027)
