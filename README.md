@@ -204,4 +204,5 @@ A 3D cube style swipe interaction inspired by Instagram's story feature
 ## drag delete
 A prototype that lets you scrub the delete key to preview and remove text
 [Demo](https://x.com/mikelikesdesign/status/2054021182824092027)
+
 This exploration was initially inspired by the [work](https://x.com/eliguerron/status/2052638041421058160) of Elí Guerrón.
