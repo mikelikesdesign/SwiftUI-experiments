@@ -205,6 +205,7 @@ A prototype that lets you scrub the delete key to preview and remove text
 
 This exploration was initially inspired by the [work](https://x.com/eliguerron/status/2052638041421058160) of Elí Guerrón.
 
-## Draggable toolbar
+## draggable toolbar
 A drawing toolbar you can drag and dock to different screen edges
 [Demo](https://x.com/mikelikesdesign/status/2103758166844756386)
+![draggable toolbar demo](https://github.com/mikelikesdesign/SwiftUI-experiments/blob/main/draggable%20toolbar/draggable%20toolbar.gif?raw=true)
