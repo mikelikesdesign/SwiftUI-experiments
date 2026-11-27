@@ -179,7 +179,7 @@ struct ChatView: View {
         .task {
             guard messages.isEmpty else { return }
             try? await Task.sleep(for: .milliseconds(300))
-            await typeAssistantMessage("How can I help?")
+            await streamAssistantMessage("How can I help?")
         }
     }
 
@@ -220,19 +220,37 @@ struct ChatView: View {
         messages.append(ChatMessage(role: .user, text: text))
         draft = ""
         Task {
-            try? await Task.sleep(for: .milliseconds(400))
-            await typeAssistantMessage("Thanks for the message but this is just a demo.", showsRestart: true)
+            try? await Task.sleep(for: .milliseconds(Int.random(in: 350...600)))
+            await streamAssistantMessage("Thanks for the message but this is just a demo.", showsRestart: true)
         }
     }
 
-    /// Appends an assistant message and types it out character by character.
-    private func typeAssistantMessage(_ text: String, showsRestart: Bool = false) async {
+    /// Appends an assistant message and streams it in a few words at a time,
+    /// with slightly uneven timing like a model producing tokens.
+    private func streamAssistantMessage(_ text: String, showsRestart: Bool = false) async {
         let message = ChatMessage(role: .assistant, text: "")
         messages.append(message)
+
+        // Split into words, keeping each word's trailing space.
+        var words: [String] = []
+        var current = ""
         for character in text {
-            try? await Task.sleep(for: .milliseconds(45))
+            current.append(character)
+            if character == " " {
+                words.append(current)
+                current = ""
+            }
+        }
+        if !current.isEmpty { words.append(current) }
+
+        var position = 0
+        while position < words.count {
+            let chunkSize = Int.random(in: 1...3)
+            let chunk = words[position..<min(position + chunkSize, words.count)].joined()
+            position += chunkSize
             guard let index = messages.firstIndex(where: { $0.id == message.id }) else { return }
-            messages[index].text.append(character)
+            messages[index].text += chunk
+            try? await Task.sleep(for: .milliseconds(Int.random(in: 25...70)))
         }
         guard showsRestart,
               let index = messages.firstIndex(where: { $0.id == message.id }) else { return }
