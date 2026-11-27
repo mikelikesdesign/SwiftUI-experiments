@@ -1,7 +1,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var keyPosition = CGPoint(x: 100, y: 100)
+    /// The key starts in the top-right corner.
+    private static let keyStartPosition = CGPoint(x: UIScreen.main.bounds.width - 100, y: 100)
+    @State private var keyPosition = keyStartPosition
     @State private var isKeyDropped = false
     @State private var codeText: [String] = [""]
     @State private var showChat = false
@@ -73,7 +75,7 @@ struct ContentView: View {
     
     // Reset everything back to the initial key screen
     private func restart() {
-        keyPosition = CGPoint(x: 100, y: 100)
+        keyPosition = Self.keyStartPosition
         isKeyDropped = false
         codeText = [""]
         withAnimation(.easeInOut(duration: 0.5)) {
