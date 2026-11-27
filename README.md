@@ -6,14 +6,17 @@ I'm a designer that is interested in building out my ideas with code. In this re
 
 ## adaptive text
 An adaptive experiment where the text size adjusts based on how close your face is to the phone
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/adaptive%20text) | [Demo](https://x.com/mikelikesdesign/status/2021432016546435397)
 
 ## AI globe
 Exploration into an AI globe visualization
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/AI%20globe) | [Demo](https://x.com/mikelikesdesign/status/1984780016761344155)
 
 ## blob animation
 An animated blob you can interact with
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/blob%20animation) | [Demo](https://x.com/mikelikesdesign/status/1856705459983646950)
 
 ## bob
@@ -25,6 +28,7 @@ A prototype that shows an interaction on how AI can summarize text
 
 ## bouncy grid
 A grid of animated lines dynamically bends and bounces in response to gestures
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/bouncy%20grid) | [Demo](https://x.com/mikelikesdesign/status/1923911302604521874)
 
 ## calculator metric
@@ -36,10 +40,12 @@ https://github.com/user-attachments/assets/5762ef74-0ac2-4859-b211-35ab5ad3d0e6
 
 ## colorful glow
 Drag around to see a colorful glow that changes in shape and color
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/colorful%20glow) | [Demo](https://x.com/mikelikesdesign/status/1872839436096160149)
 
 ## dot pattern
 Tap to create a dot pattern
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/dot%20pattern) | [Demo](https://x.com/mikelikesdesign/status/2013309408470606202)
 
 ## dots interaction
@@ -51,12 +57,14 @@ https://github.com/user-attachments/assets/df85ed2b-c9be-40f8-912c-f3e92446b779
 
 ## drag delete
 A prototype that lets you scrub the delete key to preview and remove text
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/drag-delete) | [Demo](https://x.com/mikelikesdesign/status/2054021182824092027)
 
 This exploration was initially inspired by the [work](https://x.com/eliguerron/status/2052638041421058160) of Elí Guerrón.
 
 ## drag to delete
 A prototype that shows a drag to delete interaction
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/drag%20to%20delete) | [Demo](https://x.com/mikelikesdesign/status/1794609990566826369)
 
 ## drag transform
@@ -68,6 +76,7 @@ https://github.com/user-attachments/assets/1cface78-612c-4ca8-996c-f9d70b8202ba
 
 ## draggable slider
 A slider you can adjust and drag around on the screen
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/draggable%20slider) | [Demo](https://x.com/mikelikesdesign/status/1920110828931690700)
 
 ## draggable toolbar
@@ -79,10 +88,12 @@ A drawing toolbar you can drag and dock to different screen edges
 
 ## eye drawing
 A way to draw with your eyes
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/eye%20drawing) | [Demo](https://x.com/mikelikesdesign/status/1961293308006981651)
 
 ## fried chicken
 Tap to show various fried chicken particles
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/fried%20chicken)
 
 ## globe
@@ -108,10 +119,12 @@ Drag around the map to get a restaurant recommendation
 
 ## map trackpad
 A trackpad interaction to get a restaurant recommendation based on cuisine type
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/map%20trackpad) | [Demo](https://x.com/mikelikesdesign/status/1857586105652228117)
 
 ## paper navigation
 Drag around to jump to different pages quickly
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/paper%20navigation) | [Demo](https://x.com/mikelikesdesign/status/1834568721177731268)
 
 ## particle slider
@@ -123,6 +136,7 @@ A slider to view animated particles in different states
 
 ## particle text
 A text built with particles that you can interact with and an animated gradient button
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/particle%20text) | [Demo](https://x.com/mikelikesdesign/status/1862504016011567537)
 
 ## photo bubbles
@@ -134,18 +148,22 @@ Tap to see a random image animate into view
 
 ## photo slingshot
 A prototype to slingshot photos that explores more drag gestures
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/photo%20slingshot)
 
 ## pixel animation
 Tap to generate pixel inspired animations, this example was made using mostly UIKit
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/pixel%20animation)
 
 ## pixel animation menu
 A pixel animation where you can adjust the animation settings in a menu
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/pixel%20animation%20menu) | [Demo](https://x.com/mikelikesdesign/status/1900764231605358723)
 
 ## pixel shapes
 A 3D pixelated globe that auto rotates and you can interact with
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/pixel%20shapes) | [Demo](https://x.com/mikelikesdesign/status/1920797263493824656)
 
 ## pull to search
@@ -164,14 +182,17 @@ https://github.com/user-attachments/assets/7a8c71e1-feb7-4982-850a-af4e840c6987
 
 ## reading light
 An interactive reading experience where you can adjust the light source
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/reading%20light) | [Demo](https://x.com/mikelikesdesign/status/2045658087487623290)
 
 ## reading tracker
 Get inspiring messages as the reader continues reading
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/reading%20tracker) | [Demo](https://x.com/mikelikesdesign/status/1788135346750017682)
 
 ## retro computer color picker
 A fun color picker
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/retro%20computer%20color%20picker) | [Demo](https://x.com/mikelikesdesign/status/1734069130213630021)
 
 ## shapes
@@ -183,14 +204,17 @@ https://github.com/user-attachments/assets/a2caf7ae-0efc-452e-be17-e6a0cda16dd6
 
 ## signature authentication
 Sign your signature to authenticate
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/signature%20authentication) | [Demo](https://x.com/mikelikesdesign/status/1844911279141683316)
 
 ## solid circles
 Drag around to see circles generated in a tunnel format
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/solid%20circles) | [Demo](https://x.com/mikelikesdesign/status/1855207110898065620)
 
 ## swipe interaction
 A 3D cube style swipe interaction inspired by Instagram's story feature
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/swipe%20interaction) | [Demo](https://x.com/mikelikesdesign/status/1998347143484989790?s=20)
 
 ## text alignment
@@ -216,6 +240,7 @@ https://github.com/user-attachments/assets/7081ae2a-97d8-4327-bfa8-48e064767987
 
 ## tilt grid
 A grid of colorful cards that scrolls and scales when you tilt your device
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/tilt%20grid) | [Demo](https://x.com/mikelikesdesign/status/1914281464574935109)
 
 ## walk charts
@@ -227,12 +252,15 @@ Animated walking charts based on walking data
 
 ## wave pattern
 Interactive hexagon wave grid
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/wave%20pattern) | [Demo](https://x.com/mikelikesdesign/status/1950064942834487438)
 
 ## waves
 An animated wave you can interact with
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/waves) | [Demo](https://x.com/mikelikesdesign/status/1926428571586712012)
 
 ## word slider interaction
 A slider interaction to adjust the tone of the content
+
 [Code](https://github.com/mikelikesdesign/SwiftUI-experiments/tree/main/word%20slider%20interaction) | [Demo](https://x.com/mikelikesdesign/status/1855043920109223998)
