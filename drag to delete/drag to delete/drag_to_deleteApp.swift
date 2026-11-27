@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct drag_to_deleteApp: App {
+struct DragToDeleteApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
