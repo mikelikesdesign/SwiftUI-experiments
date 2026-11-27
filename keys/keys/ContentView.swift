@@ -174,6 +174,7 @@ struct ChatView: View {
                 }
             }
         }
+        .safeAreaInset(edge: .top) { topBar }
         .safeAreaInset(edge: .bottom) { inputBar }
         .background(Color(.systemBackground))
         .task {
@@ -181,6 +182,23 @@ struct ChatView: View {
             try? await Task.sleep(for: .milliseconds(300))
             await streamAssistantMessage("How can I help?")
         }
+    }
+
+    private var topBar: some View {
+        HStack {
+            Button(action: onRestart) {
+                Image(systemName: "chevron.left")
+                    .font(.system(size: 17, weight: .semibold))
+                    .foregroundStyle(.primary)
+                    .frame(width: 44, height: 44)
+                    .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Back")
+            Spacer()
+        }
+        .padding(.horizontal, 8)
+        .background(Color(.systemBackground))
     }
 
     private var inputBar: some View {
